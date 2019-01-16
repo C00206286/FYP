@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<gfx-xform version="1">
+    <input file="sprites3.png" type="png" tile-width="8" tile-height="8"/>
+    <output file="sprites.inc">
+        <tiles var-name="uMSprites"/>
+        <maps pointers-size="8">
+        <map var-name="melli0" left="0" top="0" width="2" height="3"/>
+        <map var-name="melli1" left="2" top="0" width="2" height="3"/>
+        <map var-name="melli2" left="4" top="0" width="2" height="3"/>
+        <map var-name="melli3" left="6" top="0" width="2" height="3"/>
+        <map var-name="melli4" left="8" top="0" width="2" height="3"/>
+        <map var-name="owl0"   left="10" top="0" width="2" height="2"/>
+        <map var-name="blob0"  left="12" top="0" width="2" height="2"/>
+        <map var-name="bee0"   left="14" top="0" width="2" height="2"/>
+        <map var-name="bee1"   left="16" top="0" width="2" height="2"/>
+        <map var-name="blob1"  left="18" top="0" width="2" height="2"/>
+        <map var-name="owl1"   left="20" top="0" width="2" height="2"/>
+	<map var-name="man0"   left="22" top="0" width="2" height="3"/>
+	<map var-name="man1"   left="24" top="0" width="2" height="3"/>
+	<map var-name="man2"   left="26" top="0" width="2" height="3"/>
+	<map var-name="man3"   left="28" top="0" width="2" height="3"/>
+	<map var-name="man4"   left="30" top="0" width="2" height="3"/>
+	</maps>	
+    </output>
+</gfx-xform>

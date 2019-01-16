@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<gfx-xform version="1">
+    <input file="tiles.png" type="png" tile-width="8" tile-height="8" width="26" height="7"/>
+    <output file="tiles.inc">
+        <tiles var-name="uMTiles"/>
+        <maps pointers-size="8">
+            <map var-name="bigblue0" left="24" top="0" width="2" height="2"/>
+            <map var-name="block0"   left="0"  top="0" width="2" height="2"/>
+            <map var-name="block1"   left="2"  top="0" width="2" height="2"/>
+            <map var-name="ground"   left="4"  top="0" width="2" height="3"/>
+	        <map var-name="ground1"  left="6"  top="0" width="2" height="3"/>
+            <map var-name="ground2"  left="8"  top="0" width="2" height="3"/>
+            <map var-name="ground3"  left="10" top="0" width="2" height="3"/>            
+            <map var-name="block4"   left="12" top="0" width="2" height="2"/>
+            <map var-name="block5"   left="14" top="0" width="2" height="2"/> 
+            <map var-name="door0"    left="16" top="0" width="2" height="2"/>
+            <map var-name="door1"    left="18" top="0" width="2" height="2"/>
+            <map var-name="door2"    left="20" top="0" width="2" height="2"/>
+            <map var-name="door3"    left="22" top="0" width="2" height="2"/>
+            <map var-name="block2"   left="4"  top="3" width="2" height="2"/>
+            <map var-name="block3"   left="6"  top="3" width="2" height="2"/>
+            <map var-name="diamond0" left="8"  top="3" width="2" height="2"/>
+            <map var-name="blue"     left="0"  top="2" width="1" height="1"/>
+            <map var-name="bush1"    left="0"  top="2" width="2" height="2"/>
+            <map var-name="bush2"    left="0"  top="4" width="2" height="2"/>
+            <map var-name="bush3"    left="2"  top="2" width="2" height="2"/>
+            <map var-name="bush4"    left="2"  top="4" width="2" height="2"/>
+            <map var-name="cloud0"   left="12" top="2" width="2" height="2"/>
+            <map var-name="cloud1"   left="14" top="2" width="2" height="2"/>
+            <map var-name="cloud2"   left="12" top="4" width="2" height="2"/>
+            <map var-name="cloud3"   left="14" top="4" width="2" height="2"/>
+            <map var-name="tube0"    left="18" top="2" width="2" height="2"/>
+            <map var-name="tube1"    left="20" top="2" width="2" height="2"/>
+            <map var-name="tube2"    left="18" top="4" width="2" height="2"/>
+            <map var-name="tube3"    left="20" top="4" width="2" height="2"/>
+            <map var-name="tube4"    left="16" top="2" width="2" height="2"/>
+            <map var-name="tube5"    left="16" top="4" width="2" height="2"/>
+            <map var-name="mush0"    left="22" top="2" width="2" height="2"/>
+            <map var-name="mush1"    left="24" top="2" width="2" height="2"/>
+            <map var-name="mush2"    left="22" top="4" width="2" height="2"/>
+            <map var-name="mush3"    left="24" top="4" width="2" height="2"/>
+            <map var-name="bridge0"  left="4"  top="5" width="1" height="1"/>
+            <map var-name="bridge1"  left="5"  top="5" width="1" height="1"/>
+            <map var-name="bridge2"  left="6"  top="5" width="1" height="1"/>
+            <map var-name="bridge3"  left="7"  top="5" width="1" height="1"/>
+            <map var-name="nb"       left="0"  top="6" width="1" height="1"/>
+            <map var-name="n0"       left="1"  top="6" width="1" height="1"/>
+            <map var-name="n1"       left="2"  top="6" width="1" height="1"/>
+            <map var-name="n2"       left="3"  top="6" width="1" height="1"/>
+            <map var-name="n3"       left="4"  top="6" width="1" height="1"/>
+            <map var-name="n4"       left="5"  top="6" width="1" height="1"/>
+            <map var-name="n5"       left="6"  top="6" width="1" height="1"/>
+            <map var-name="n6"       left="7"  top="6" width="1" height="1"/>
+            <map var-name="n7"       left="8"  top="6" width="1" height="1"/>
+            <map var-name="n8"       left="9"  top="6" width="1" height="1"/>
+            <map var-name="n9"       left="10" top="6" width="1" height="1"/>
+            <map var-name="nm"       left="11" top="6" width="1" height="1"/>
+            <map var-name="score0"   left="12" top="6" width="4" height="1"/>
+            <map var-name="bonus0"   left="16" top="6" width="4" height="1"/>
+            <map var-name="level0"   left="20" top="6" width="4" height="1"/>
+            <map var-name="x0"       left="0"  top="7" width="1" height="1"/>
+            <map var-name="get0"     left="1"  top="7" width="7" height="1"/>
+            <map var-name="live0"    left="8"  top="7" width="3" height="1"/>
+            <map var-name="time0"    left="11" top="7" width="3" height="1"/>
+            <map var-name="press0"   left="14" top="7" width="8" height="1"/>
+            <map var-name="over0"    left="0"  top="8" width="7"  height="1"/>
+            <map var-name="timeup0"  left="7"  top="8" width="6"  height="1"/>
+            <map var-name="congra0"  left="14" top="8" width="10" height="1"/>
+            <map var-name="spike0"   left="24" top="7" width="1"  height="2"/>
+            <map var-name="spike1"   left="25" top="7" width="1"  height="2"/>
+
+	</maps>	
+    </output>
+</gfx-xform>
