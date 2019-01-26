@@ -20,6 +20,7 @@
             <map var-name="block2"   left="4"  top="3" width="2" height="2"/>
             <map var-name="block3"   left="6"  top="3" width="2" height="2"/>
             <map var-name="diamond0" left="8"  top="3" width="2" height="2"/>
+	    <map var-name="banana"   left="10" top="3" width="2" height="2"/>
             <map var-name="blue"     left="0"  top="2" width="1" height="1"/>
             <map var-name="bush1"    left="0"  top="2" width="2" height="2"/>
             <map var-name="bush2"    left="0"  top="4" width="2" height="2"/>
