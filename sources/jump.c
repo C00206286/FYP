@@ -213,6 +213,7 @@ typedef struct Player{
     int8_t yimpulse;
     bool jumping;
     bool jumpreleased;
+    bool bpressed;
     uint8_t jumpcounter;
     uint8_t aniframe;
 } Player;
@@ -260,7 +261,7 @@ int bananay;
 int bananaxs[6];
 int bananays[6];
 int banspwncnt = 0;
-int maxbananas = 6;
+int maxban = 6;
 int oldx;
 int oldx2;    
 int oldy;
@@ -308,11 +309,15 @@ player.jumpreleased = true;
 player.jumping = false;
 player.jumpcounter = 0;
 };
+if ( !(joy&BTN_B) ) {
+player.bpressed = false;
+};
 if ( joy&BTN_B && player.touchground) {
-	if(bananaCount > 0)
+	if(bananaCount > 0 && player.bpressed == false)
 	{
 	bananaCount = bananaCount - 1;
 	makeBanana( player.x + 4, player.y ,1);
+	player.bpressed = true;
 	};
 };    
 
@@ -403,7 +408,19 @@ player2.yimpulse = 0;
 player2.jumpreleased = true;
 player2.jumping = false;
 player2.jumpcounter = 0;
-};   
+};
+
+if ( !(joy&BTN_B) ) {
+player2.bpressed = false;
+};
+if ( joy&BTN_B && player2.touchground) {
+	if(bananaCount > 0 && player2.bpressed == false)
+	{
+	bananaCount = bananaCount - 1;
+	makeBanana( player2.x + 4, player2.y ,1);
+	player2.bpressed = true;
+	};
+};      
 
 
 if (joy&BTN_A && player2.touchground && player2.jumpreleased) {
@@ -704,22 +721,25 @@ if(destX>=32)destX=0;
 
 void makeBanana(int x, int y,int z)
 {
-int lx;
-int ly;
-lx = x + Levelx;
-ly = y;
-lx = lx >> 4;
-ly = ly >> 4;  
-lx = lx * 2 + destX;
-if (lx >= 32 ) lx = lx - 32;
-DrawMap2(  (lx - 2)    ,  ly *  2    ,banana );
-bananax = (lx - 2);
-bananay = ly * 2;
-bananaxs[banspwncnt] = bananax;
-bananays[banspwncnt] = bananay;
-banspwncnt = banspwncnt + 1;
+if(banspwncnt < maxban)
+{
+	int lx;
+	int ly;
+	lx = x + Levelx;
+	ly = y;
+	lx = lx >> 4;
+	ly = ly >> 4;  
+	lx = lx * 2 + destX;
+	if (lx >= 32 ) lx = lx - 32;
+	DrawMap2(  (lx - 2)    ,  ly *  2    ,banana );
+	bananax = (lx - 2);
+	bananay = ly * 2;
+	bananaxs[banspwncnt] = bananax;
+	bananays[banspwncnt] = bananay;
+	banspwncnt = banspwncnt + 1;
 }
-void checkBanana(int x,int y,int z)
+}
+int checkBanana(int x,int y,int z)
 {
 int lx;
 int ly;
@@ -735,6 +755,16 @@ for(int i = 0; i < banspwncnt; i++)
 	if(bananaxs[i] == lx && bananays[i] == (ly *  2) -2)
 	{   
 	DrawMap2(  lx    ,  (ly *  2) -2,block0 );
+        for(int j = i; j < banspwncnt - 1; j++)
+	{
+	bananaxs[j] = bananaxs[j + 1];
+	bananays[j] = bananays[j + 1];
+	}
+	banspwncnt = banspwncnt - 1;
+	return 1;
+	}
+	else{
+	return 0;
 	}
 }
 }
