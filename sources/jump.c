@@ -29,8 +29,8 @@
 #include "data/patches.inc"
 #include "data/music.inc"
 #define gravity 2
-#define spriteInd 6
-#define owlIndex 12
+#define spriteInd 7
+#define owlIndex 14
 // Level-Data:
 const char intro0[] PROGMEM ={
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
@@ -50,18 +50,18 @@ const char intro0[] PROGMEM ={
 };
 
 const char level1[] PROGMEM ={
-1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,37,38,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,2 ,3 ,2 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,41,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,3 ,2 ,2 ,3 ,3 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,2 ,2 ,2 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,50 ,0 ,0 ,0 ,0 ,0 ,0 ,50,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,11,12,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,11,12,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,2 ,3 ,2 ,3 ,3 ,2 ,0, 1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,13,14,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,3 ,2 ,2 ,3 ,0 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,21,22,0 ,0 ,31,33,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,31,33,0 ,0 ,21,22,0 ,0 ,0 ,0 ,0 ,0 ,11,12,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,31,33,0 ,0 ,0 ,0 ,0 ,0 ,25,26,
-0 ,0 ,0 ,0 ,23,24,0 ,0 ,32,34,0 ,0 ,50 ,0 ,50 ,0 ,50 ,0 ,0 ,0 ,0 ,32,34,0 ,0 ,23,24,0 ,0 ,0 ,0 ,0 ,0 ,13,14,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,32,34,0 ,0 ,0 ,0 ,0 ,0 ,27,28,
+0 ,0 ,0 ,0 ,23,24,0 ,0 ,32,34,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,32,34,0 ,0 ,23,24,0 ,0 ,0 ,0 ,0 ,0 ,13,14,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,32,34,0 ,0 ,0 ,0 ,0 ,0 ,27,28,
 1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,5 ,0 ,6 ,1 ,1 ,1 ,1 ,1 ,5 ,0 ,6 ,5 ,0 ,6 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,5 ,0 ,8 ,0 ,8 ,0 ,6 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 };
@@ -203,6 +203,8 @@ const char level9[] PROGMEM ={
 typedef struct Player{ 
     int x; 
     int y; 
+    int sCount;
+    bool stuck;
     int facing;
     char action; 
     char direction;
@@ -285,19 +287,28 @@ bool play;
 void moveplayer()
 {
 unsigned int joy=ReadJoypad(0);
+if(player.stuck)
+{
+player.sCount = player.sCount + 1;
+if(player.sCount >= 100)
+{
+player.sCount = 0;
+player.stuck = false;
+}
+}
 //if (joy&BTN_B) TriggerFx(6,0xff,true);
 if (introplaying && joy&BTN_START) { introplaying = false;return;}; 
 if (!introplaying)
 {
 
  
-if (joy&BTN_LEFT) { 
+if (joy&BTN_LEFT && player.stuck == false) { 
 player.direction = 'l';
 player.action = 'w';
 player.facing = 1;
 player.ximpulse = -1; 
 };
-if (joy&BTN_RIGHT) {
+if (joy&BTN_RIGHT && player.stuck == false) {
 player.direction = 'r';
 player.action = 'w';
 player.facing = 0;
@@ -322,7 +333,7 @@ if ( joy&BTN_B && player.touchground) {
 };    
 
 
-if (joy&BTN_A && player.touchground && player.jumpreleased) {
+if (joy&BTN_A && player.touchground && player.jumpreleased && player.stuck == false) {
 player.action = 'j';
 player.yimpulse = 0;
 player.jumping = true;
@@ -348,7 +359,10 @@ if (player.x < oldx ) { player.aniframe++;player.direction = 'l';};
 if (player.x == oldx  ) { player.aniframe = 0;};
 if (player.aniframe > 0 ) player.aniframe++;
 if (player.aniframe>24) player.aniframe = 1;
-checkBanana(player.x + 4, player.y ,1);  
+if(checkBanana(player.x + 4, player.y ,1) == 1)
+{
+    player.stuck = true;
+} 
 checkcollide( player.x, player.y - 4 ,1);
 checkcollide( player.x -3, player.y - 4 ,3);
 checkcollide( player.x +4, player.y - 4 ,3);
@@ -385,19 +399,28 @@ return;
 void moveplayer2()
 {
 unsigned int joy=ReadJoypad(1);
+if(player2.stuck)
+{
+player2.sCount = player2.sCount + 1;
+if(player2.sCount >= 100)
+{
+player2.sCount = 0;
+player2.stuck = false;
+}
+}
 //if (joy&BTN_B) TriggerFx(6,0xff,true);
 if (introplaying && joy&BTN_START) { introplaying = false;return;}; 
 if (!introplaying)
 {
 
  
-if (joy&BTN_LEFT) { 
+if (joy&BTN_LEFT && player2.stuck == false) { 
 player2.direction = 'l';
 player2.action = 'w';
 player2.facing = 1;
 player2.ximpulse = -1; 
 };
-if (joy&BTN_RIGHT) {
+if (joy&BTN_RIGHT && player2.stuck == false) {
 player2.direction = 'r';
 player2.action = 'w';
 player2.facing = 0;
@@ -420,10 +443,10 @@ if ( joy&BTN_B && player2.touchground) {
 	makeBanana( player2.x + 4, player2.y ,1);
 	player2.bpressed = true;
 	};
-};      
+};   
 
 
-if (joy&BTN_A && player2.touchground && player2.jumpreleased) {
+if (joy&BTN_A && player2.touchground && player2.jumpreleased && player2.stuck == false) {
 player2.action = 'j';
 player2.yimpulse = 0;
 player2.jumping = true;
@@ -449,7 +472,10 @@ if (player2.x < oldx ) { player2.aniframe++;player2.direction = 'l';};
 if (player2.x == oldx  ) { player2.aniframe = 0;};
 if (player2.aniframe > 0 ) player2.aniframe++;
 if (player2.aniframe>24) player2.aniframe = 1;
-checkBanana(player2.x + 4, player2.y ,1); 
+if(checkBanana(player2.x + 4, player2.y ,1) == 1)
+{
+    player2.stuck = true;
+} 
 checkcollide( player2.x, player2.y - 4 ,1);
 checkcollide( player2.x -3, player2.y - 4 ,3);
 checkcollide( player2.x +4, player2.y - 4 ,3);
@@ -501,6 +527,10 @@ if (player.direction == 'l' && player.aniframe > 16 && player.aniframe <= 24 ) M
 
 if (player.direction == 'r' && player.jumping == true  ) MapSprite2(0 ,melli3 ,0);   
 if (player.direction == 'l' && player.jumping == true ) MapSprite2(0 ,melli3 ,1); 
+if(player.stuck == true)
+{
+   MapSprite2(0 ,melli5 ,0);
+}
 MoveSprite(0 ,player.x -7 ,player.y - 21  ,2 ,3);
 
 
@@ -528,6 +558,10 @@ if (player2.direction == 'l' && player2.aniframe > 16 && player2.aniframe <= 24 
 
 if (player2.direction == 'r' && player2.jumping == true  ) MapSprite2(spriteInd ,man3 ,0);   
 if (player2.direction == 'l' && player2.jumping == true ) MapSprite2(spriteInd ,man3 ,1); 
+if(player2.stuck == true)
+{
+   MapSprite2(spriteInd ,man5 ,0);
+}
 MoveSprite(spriteInd ,player2.x -7 ,player2.y - 21  ,2 ,3);
 if ( player2.aniframe > 20 ) player2.aniframe = 0;     
 
@@ -586,6 +620,10 @@ void initlevel()
 
 void drawlevel(int x)
 {
+player.stuck = false;
+player2.stuck = false;
+player.sCount =0;
+player2.sCount =0;
 int xi;
 int yi;
 char c;
@@ -753,8 +791,9 @@ if (lx >= 32 ) lx = lx - 32;
 for(int i = 0; i < banspwncnt; i++)
 {
 	if(bananaxs[i] == lx && bananays[i] == (ly *  2) -2)
-	{   
-	DrawMap2(  lx    ,  (ly *  2) -2,block0 );
+	{ 
+        DrawMap2(  lx    ,  (ly *  2) -2,bigblue0 ); 
+	DrawMap2(  lx    ,  (ly *  2) -1,banana2 );
         for(int j = i; j < banspwncnt - 1; j++)
 	{
 	bananaxs[j] = bananaxs[j + 1];
