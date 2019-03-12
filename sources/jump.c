@@ -1,20 +1,3 @@
-/*
- *  Uzebox quick and dirty tutorial
- *  Copyright (C) 2008  Alec Bourque
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation , either version 3 of the License , or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful ,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not , see <http://www.gnu.org/licenses/>.
-*/
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -29,18 +12,22 @@
 #include "data/patches.inc"
 #include "data/music.inc"
 #define gravity 2
-#define spriteInd 7
-#define owlIndex 14
+#define spriteInd 10
+#define owlIndex 6
+#define blobIndex 8
+#define UZEMCHR _SFR_IO8(26) //uzem whisper port for outputting characters to the console
+#define UZEMHEX _SFR_IO8(25) //uzem whisper port for outputting hex bytes values to the console
+
 // Level-Data:
 const char intro0[] PROGMEM ={
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,4, 0, 0 ,0 ,4 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,4, 4, 0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0, 4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,51,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,4 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0, 4 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,4 ,0 ,0 ,4 ,4 ,4 ,0 ,4 ,0 ,4 ,4 ,0 ,0 ,4 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,
-0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0, 4 ,4 ,4 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,
-0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,4 ,4 ,4 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0, 4 ,0 ,4 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,0 ,0 ,4 ,4, 4 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0, 4 ,0 ,0 ,4 ,0 ,0 ,4, 0 ,0 ,0 ,0 ,0, 4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,4 ,0 ,0 ,4 ,4 ,0 ,4 ,4 ,0 ,4 ,0 ,0 ,0 ,4 ,3 ,4 ,0 ,0 ,0 ,0, 4 ,0 ,0 ,0 ,3 ,0 ,0, 4 ,4 ,0 ,0 ,0 ,0 ,3 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,4 ,4 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0, 0, 0 ,0 ,4 ,4 ,4 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0, 0, 0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,51,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,4 ,4 ,4 ,4 ,0 ,4 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,3 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,3 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,3 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,21,22,0 ,0 ,31,33,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,31,33,0 ,0 ,21,22,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,21,22,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,21,22,0 ,0 ,0 ,0 ,0 ,0 ,0 ,31,33,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,31,33,0 ,0 ,0 ,0 ,0 ,0 ,25,26,
@@ -56,7 +43,7 @@ const char level1[] PROGMEM ={
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,2 ,3 ,2 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,41,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,3 ,2 ,2 ,3 ,3 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,50 ,0 ,2 ,3 ,2 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,41,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,3 ,2 ,2 ,3 ,3 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,2 ,2 ,2 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,11,12,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,2 ,3 ,2 ,3 ,3 ,2 ,0, 1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,13,14,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,3 ,2 ,2 ,3 ,0 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
@@ -203,6 +190,8 @@ const char level9[] PROGMEM ={
 typedef struct Player{ 
     int x; 
     int y; 
+    int speed;
+    int mushroomCount;
     int sCount;
     bool stuck;
     int facing;
@@ -216,6 +205,8 @@ typedef struct Player{
     bool jumping;
     bool jumpreleased;
     bool bpressed;
+    bool ypressed;
+    bool bananaBool;
     uint8_t jumpcounter;
     uint8_t aniframe;
 } Player;
@@ -260,8 +251,8 @@ Bridge bridges[maxbridges];
 u8 level;
 int bananax;
 int bananay;
-int bananaxs[6];
-int bananays[6];
+int bananaxs[10];
+int bananays[10];
 int banspwncnt = 0;
 int maxban = 6;
 int oldx;
@@ -286,6 +277,8 @@ bool play;
 
 void moveplayer()
 {
+ 
+player.mushroomCount = 10;
 unsigned int joy=ReadJoypad(0);
 if(player.stuck)
 {
@@ -306,13 +299,13 @@ if (joy&BTN_LEFT && player.stuck == false) {
 player.direction = 'l';
 player.action = 'w';
 player.facing = 1;
-player.ximpulse = -1; 
+player.ximpulse = -player.speed; 
 };
 if (joy&BTN_RIGHT && player.stuck == false) {
 player.direction = 'r';
 player.action = 'w';
 player.facing = 0;
-player.ximpulse = 1; 
+player.ximpulse = player.speed; 
 };
 if ( !(joy&BTN_A) ) {
 player.yimpulse = 0;
@@ -327,8 +320,19 @@ if ( joy&BTN_B && player.touchground) {
 	if(bananaCount > 0 && player.bpressed == false)
 	{
 	bananaCount = bananaCount - 1;
-	makeBanana( player.x + 4, player.y ,1);
+    player.bananaBool = true;
 	player.bpressed = true;
+	};
+};  
+if ( !(joy&BTN_Y) ) {
+player.ypressed = false;
+};
+if ( joy&BTN_Y) {
+	if(player.mushroomCount > 0 && player.ypressed == false)
+	{
+	player.mushroomCount = player.mushroomCount - 1;
+	player.speed = 10;
+	player.ypressed = true;
 	};
 };    
 
@@ -363,6 +367,11 @@ if(checkBanana(player.x + 4, player.y ,1) == 1)
 {
     player.stuck = true;
 } 
+if(player.bananaBool == true)
+{
+makeBanana2(player.x + 4, player.y,1);
+player.bananaBool = false;
+}
 checkcollide( player.x, player.y - 4 ,1);
 checkcollide( player.x -3, player.y - 4 ,3);
 checkcollide( player.x +4, player.y - 4 ,3);
@@ -386,8 +395,8 @@ checkmonster(player.x , player.y -22 ,0);
 if (player.y > oldy )   checkmonster(player.x + 4, player.y ,0 );
 player.ximpulse = 0;    
 player.yimpulse = 0;
-if ( player.x < 8 ) player.x = 8;
-if ( player.x > 232 ) player.x = 232;    
+if ( player.x < 8 ) player.x = player2.x;   // Increase time penalty herer
+if ( player.x > 232 ) player.x = player2.x;    
 
 
     
@@ -440,10 +449,21 @@ if ( joy&BTN_B && player2.touchground) {
 	if(bananaCount > 0 && player2.bpressed == false)
 	{
 	bananaCount = bananaCount - 1;
-	makeBanana( player2.x + 4, player2.y ,1);
+    player2.bananaBool = true;
 	player2.bpressed = true;
 	};
-};   
+};  
+if ( !(joy&BTN_Y) ) {
+player2.ypressed = false;
+};
+if ( joy&BTN_Y) {
+	if(player2.mushroomCount > 0 && player2.ypressed == false)
+	{
+	player2.mushroomCount = player2.mushroomCount - 1;
+	player2.ximpulse = 10;
+	player2.ypressed = true;
+	};
+}; 
 
 
 if (joy&BTN_A && player2.touchground && player2.jumpreleased && player2.stuck == false) {
@@ -476,6 +496,11 @@ if(checkBanana(player2.x + 4, player2.y ,1) == 1)
 {
     player2.stuck = true;
 } 
+if(player2.bananaBool == true)
+{
+makeBanana2(player2.x + 4, player2.y,1);
+player2.bananaBool = false;
+}
 checkcollide( player2.x, player2.y - 4 ,1);
 checkcollide( player2.x -3, player2.y - 4 ,3);
 checkcollide( player2.x +4, player2.y - 4 ,3);
@@ -488,19 +513,19 @@ if (player2.y < oldy ) if (checkcollide( player2.x - 3 , player2.y -21, 0 )&1 ||
                                                                                                                                  };    
 if (player2.x > oldx ) if (checkcollide( player2.x + 5 , player2.y - 3 ,0 )&1 || checkcollide( player2.x + 5 , player2.y - 20,0 )&1)  player2.x = oldx;  
 if (player2.x < oldx ) if (checkcollide( player2.x - 4 , player2.y - 3 ,0 )&1 || checkcollide( player2.x - 4 , player2.y - 20,0 )&1)  player2.x = oldx; 
-if (player2.y > oldy )   checkmonster(player2.x + 4, player2.y ,1 );
-if (player2.y > oldy )   checkmonster(player2.x - 4, player2.y ,1 );
-if (player2.y > oldy )   checkmonster(player2.x , player2.y ,1 );
-checkmonster(player2.x +4, player2.y -3,0 );
-checkmonster(player2.x +4, player2.y -19,0 );
-checkmonster(player2.x -3, player2.y -3 ,0);
-checkmonster(player2.x -3, player2.y -19 ,0);  
-checkmonster(player2.x , player2.y -22 ,0);
-if (player2.y > oldy )   checkmonster(player2.x + 4, player2.y ,0 );
+//if (player2.y > oldy )   checkmonster(player2.x + 4, player2.y ,1 );
+//if (player2.y > oldy )   checkmonster(player2.x - 4, player2.y ,1 );
+//if (player2.y > oldy )   checkmonster(player2.x , player2.y ,1 );
+//checkmonster(player2.x +4, player2.y -3,0 );
+//checkmonster(player2.x +4, player2.y -19,0 );
+//checkmonster(player2.x -3, player2.y -3 ,0);
+//checkmonster(player2.x -3, player2.y -19 ,0);  
+//checkmonster(player2.x , player2.y -22 ,0);
+//if (player2.y > oldy )   checkmonster(player2.x + 4, player2.y ,0 );
 player2.ximpulse = 0;    
 player2.yimpulse = 0;
-if ( player2.x < 8 ) player2.x = 8;
-if ( player2.x > 232 ) player2.x = 232;    
+if ( player2.x < 8 ) player2.x = player.x;   // Increase time penalty herer
+if ( player2.x > 232 ) player2.x = player.x;    
 
 
     
@@ -512,26 +537,26 @@ return;
 void drawplayer()
 {
  
-if  ( player.jumping == false  )
-{
-if (player.direction == 'r' && player.aniframe == 0 ) MapSprite2(0 ,melli0 ,0);
-if (player.direction == 'l' && player.aniframe == 0 ) MapSprite2(0 ,melli0 ,1);
-if (player.direction == 'r' && player.aniframe > 0 && player.aniframe  <= 8 )  MapSprite2(0 ,melli1 ,0);
-if (player.direction == 'r' && player.aniframe > 8 && player.aniframe <= 16 ) MapSprite2(0 ,melli2 ,0);    
-if (player.direction == 'r' && player.aniframe > 16 && player.aniframe <= 24 ) MapSprite2(0 ,melli4 ,0);  
+//if  ( player.jumping == false  )
+//{
+if (player.direction == 'r' && player.aniframe == 0 ) MapSprite2(0 ,pac0 ,0);
+if (player.direction == 'l' && player.aniframe == 0 ) MapSprite2(0 ,pac0 ,1);
+if (player.direction == 'r' && player.aniframe > 0 && player.aniframe  <= 8 )  MapSprite2(0 ,pac0 ,0);
+if (player.direction == 'r' && player.aniframe > 8 && player.aniframe <= 16 ) MapSprite2(0 ,pac1 ,0);    
+if (player.direction == 'r' && player.aniframe > 16 && player.aniframe <= 24 ) MapSprite2(0 ,pac2 ,0);  
 
-if (player.direction == 'l' && player.aniframe > 0 && player.aniframe  <= 8 )  MapSprite2(0 ,melli1 ,1);
-if (player.direction == 'l' && player.aniframe > 8 && player.aniframe <= 16 ) MapSprite2(0 ,melli2 ,1);    
-if (player.direction == 'l' && player.aniframe > 16 && player.aniframe <= 24 ) MapSprite2(0 ,melli4 ,1);  
-};
+if (player.direction == 'l' && player.aniframe > 0 && player.aniframe  <= 8 )  MapSprite2(0 ,pac0 ,1);
+if (player.direction == 'l' && player.aniframe > 8 && player.aniframe <= 16 ) MapSprite2(0 ,pac1 ,1);    
+if (player.direction == 'l' && player.aniframe > 16 && player.aniframe <= 24 ) MapSprite2(0 ,pac2 ,1);  
+//};
 
-if (player.direction == 'r' && player.jumping == true  ) MapSprite2(0 ,melli3 ,0);   
-if (player.direction == 'l' && player.jumping == true ) MapSprite2(0 ,melli3 ,1); 
+//if (player.direction == 'r' && player.jumping == true  ) MapSprite2(0 ,man3 ,0);   
+//if (player.direction == 'l' && player.jumping == true ) MapSprite2(0 ,man3 ,1); 
 if(player.stuck == true)
 {
-   MapSprite2(0 ,melli5 ,0);
+   MapSprite2(0 ,pac0 ,0);
 }
-MoveSprite(0 ,player.x -7 ,player.y - 21  ,2 ,3);
+MoveSprite(0 ,player.x -7 ,player.y - 21  ,2 ,2);
 
 
 
@@ -543,27 +568,31 @@ if ( aniframe > 20 ) aniframe = 0;
 void drawplayer2()
 {
  
-if  ( player2.jumping == false  )
-{
-if (player2.direction == 'r' && player2.aniframe == 0 ) MapSprite2(spriteInd ,man0 ,0);
-if (player2.direction == 'l' && player2.aniframe == 0 ) MapSprite2(spriteInd,man0 ,1);
-if (player2.direction == 'r' && player2.aniframe > 0 && player2.aniframe  <= 8 )  MapSprite2(spriteInd ,man1 ,0);
-if (player2.direction == 'r' && player2.aniframe > 8 && player2.aniframe <= 16 ) MapSprite2(spriteInd ,man2 ,0);    
-if (player2.direction == 'r' && player2.aniframe > 16 && player2.aniframe <= 24 ) MapSprite2(spriteInd ,man4 ,0);  
+//if  ( player.jumping == false  )
+//{
+if (player2.direction == 'r' && player2.aniframe == 0 ) MapSprite2(10 ,run0 ,0);
+if (player2.direction == 'l' && player2.aniframe == 0 ) MapSprite2(10 ,run0 ,1);
+if (player2.direction == 'r' && player2.aniframe > 0 && player2.aniframe  <= 8 )  MapSprite2(10 ,run0 ,0);
+if (player2.direction == 'r' && player2.aniframe > 8 && player2.aniframe <= 16 ) MapSprite2(10 ,run1 ,0);    
+if (player2.direction == 'r' && player2.aniframe > 16 && player2.aniframe <= 24 ) MapSprite2(10 ,run0 ,0);  
 
-if (player2.direction == 'l' && player2.aniframe > 0 && player2.aniframe  <= 8 )  MapSprite2(spriteInd ,man1 ,1);
-if (player2.direction == 'l' && player2.aniframe > 8 && player2.aniframe <= 16 ) MapSprite2(spriteInd ,man2 ,1);    
-if (player2.direction == 'l' && player2.aniframe > 16 && player2.aniframe <= 24 ) MapSprite2(spriteInd ,man4 ,1);  
-};
+if (player2.direction == 'l' && player2.aniframe > 0 && player2.aniframe  <= 8 )  MapSprite2(10 ,run0 ,1);
+if (player2.direction == 'l' && player2.aniframe > 8 && player2.aniframe <= 16 ) MapSprite2(10 ,run1 ,1);    
+if (player2.direction == 'l' && player2.aniframe > 16 && player2.aniframe <= 24 ) MapSprite2(10 ,run0 ,1);  
+//};
 
-if (player2.direction == 'r' && player2.jumping == true  ) MapSprite2(spriteInd ,man3 ,0);   
-if (player2.direction == 'l' && player2.jumping == true ) MapSprite2(spriteInd ,man3 ,1); 
-if(player2.stuck == true)
+//if (player.direction == 'r' && player.jumping == true  ) MapSprite2(0 ,man3 ,0);   
+//if (player.direction == 'l' && player.jumping == true ) MapSprite2(0 ,man3 ,1); 
+if(player.stuck == true)
 {
-   MapSprite2(spriteInd ,man5 ,0);
+   MapSprite2(10 ,run0 ,0);
 }
-MoveSprite(spriteInd ,player2.x -7 ,player2.y - 21  ,2 ,3);
-if ( player2.aniframe > 20 ) player2.aniframe = 0;     
+MoveSprite(10 ,player2.x -7 ,player2.y - 21  ,2 ,2);
+
+
+
+aniframe++;
+if ( aniframe > 20 ) aniframe = 0;     
 
 
 }
@@ -756,10 +785,7 @@ destX++;
 if(destX>=32)destX=0; 
 }
 
-
-void makeBanana(int x, int y,int z)
-{
-if(banspwncnt < maxban)
+void makeBanana2(int x, int y,int z)
 {
 	int lx;
 	int ly;
@@ -769,13 +795,22 @@ if(banspwncnt < maxban)
 	ly = ly >> 4;  
 	lx = lx * 2 + destX;
 	if (lx >= 32 ) lx = lx - 32;
-	DrawMap2(  (lx - 2)    ,  ly *  2    ,banana );
-	bananax = (lx - 2);
-	bananay = ly * 2;
+    lx = lx - 2;
+    ly = (ly * 2) - 2;
+	DrawMap2(  lx ,  ly  ,banana );
+    bananax = lx;
+	bananay = ly;
+    UZEMHEX= bananaxs; 
+    UZEMCHR = "X";
+    //UZEMHEX='\n';
 	bananaxs[banspwncnt] = bananax;
 	bananays[banspwncnt] = bananay;
+    UZEMHEX= bananaxs; 
+    //UZEMHEX='\n';
 	banspwncnt = banspwncnt + 1;
-}
+    //if(banspwncnt == 10){
+     //   banspwncnt = 0;
+    //}
 }
 int checkBanana(int x,int y,int z)
 {
@@ -788,24 +823,34 @@ ly = ly >> 4;
 lx = lx * 2 + destX;
 if (lx >= 32 ) lx = lx - 32;
 //DrawMap2(  lx    ,  (ly *  2) -2,block0 );
+ly = (ly * 2) -2;
+//DrawMap2(  lx    ,  ly,block0 );
+
 for(int i = 0; i < banspwncnt; i++)
 {
-	if(bananaxs[i] == lx && bananays[i] == (ly *  2) -2)
+	if(bananaxs[i] == lx && bananays[i] == ly)
 	{ 
-        DrawMap2(  lx    ,  (ly *  2) -2,bigblue0 ); 
-	DrawMap2(  lx    ,  (ly *  2) -1,banana2 );
-        for(int j = i; j < banspwncnt - 1; j++)
-	{
-	bananaxs[j] = bananaxs[j + 1];
-	bananays[j] = bananays[j + 1];
-	}
+        DrawMap2(  lx    ,  ly,bigblue0 ); 
+	    DrawMap2(  lx    ,  ly + 1,banana2 );
+    if(banspwncnt > 1) // only delete if it is not the only thing in the array.
+    {
+                for(int j = i; j < banspwncnt - 1; j++)
+            {
+            bananaxs[j] = bananaxs[j + 1];
+            bananays[j] = bananays[j + 1];
+            }
+    }
+   // else{
+        //bananaxs[i] = 900;
+        //bananays[i] = 900;
+    //}
 	banspwncnt = banspwncnt - 1;
 	return 1;
 	}
-	else{
-	return 0;
-	}
 }
+
+return 0;
+	
 }
 int checkcollide(int x, int y,int z)
 {
@@ -1031,7 +1076,7 @@ else
     
 if (blob.onscreen)
 {
-if (!blob.alive) { MapSprite2(owlIndex , blob1 ,0);  MoveSprite(owlIndex ,blob.x, blob.y  ,2 ,2);return;}; 
+if (!blob.alive) { MapSprite2(blobIndex , blob1 ,0);  MoveSprite(blobIndex ,blob.x, blob.y  ,2 ,2);return;}; 
 if (aniframe < 10 ) 
 {
     MoveSprite(owlIndex ,blob.x, blob.y  ,2 ,2);
@@ -1231,9 +1276,11 @@ void playintro()
 introplaying = true;
 Levelx = 0;
 scrolltiles = 0;
+player2.speed = 1;
 player2.x = 21;
 player2.y = 191;
 player2.touchground = true;
+player.speed = 1;
 player.x = 8;
 player.y = 191;
 player.touchground = true;
@@ -1244,8 +1291,8 @@ initmonster();
 setheadline();    
 drawlevel(Levelx);
 setheadline();
-MapSprite2(0 ,melli0 ,0);
-MapSprite2(spriteInd ,man0,0);
+MapSprite2(0 ,pac0 ,0);
+MapSprite2(spriteInd ,run0,0);
 MapSprite2(owlIndex ,owl0 ,0);      
 score = 0;
 leveltime = 99;
@@ -1297,7 +1344,7 @@ if ( ( time ==  150 || time ==  330  ) && introplaying ) {
 };
 
 
-if  ( ( player.x == 149 && scrolltiles == 14 && Levelx == 2 ) || ( player.x == 149 && scrolltiles == 23 && Levelx == 10 ) || ( player.x == 149 && scrolltiles == 32 && Levelx == 10 )  || ( player.x == 149 && scrolltiles == 42 && Levelx == 10 ) )
+if  ( ( player.x == 149 && scrolltiles == 14 && Levelx == 2 ) || ( player.x == 149 && scrolltiles == 23 && Levelx == 10 ) || ( player.x == 149 && scrolltiles == 32 && Levelx == 10 )  || ( player.x == 149 && scrolltiles == 42 && Levelx == 10 ) || ( player.x == 149 && scrolltiles == 36 && Levelx == 10 ) )
 {
 player.action = 'j';
 player.yimpulse = 0;
@@ -1316,7 +1363,7 @@ if ( player.x >= 180 && time > 420 ) {
 FadeOut(5,true); 
 player.x = 8;
 player.y = 191;
-MoveSprite(0 ,player.x -7 ,player.y - 21  ,2 ,3);
+MoveSprite(0 ,player.x -7 ,player.y - 21  ,2 ,2);
 
 }
 
@@ -1328,7 +1375,7 @@ initlevel();
 
 printheadline();
 printtileint( 26 ,0,99,2); 
-MoveSprite(0 ,-20 ,-20 ,2 ,3);
+MoveSprite(0 ,-20 ,-20 ,2 ,2);
 MoveSprite(owlIndex ,-20 ,-20  ,2 ,2);
 DrawMap2(  11, 10  ,get0 ); 
 WaitVsync(1);  
@@ -1346,7 +1393,7 @@ void showgameover()
 FadeOut(0, true);
 Screen.scrollX = 0;
 initlevel();
-MoveSprite(0 ,-20 ,-20 ,2 ,3);
+MoveSprite(0 ,-20 ,-20 ,2 ,2);
 MoveSprite(owlIndex ,-20 ,-20  ,2 ,2);
 DrawMap2(  11, 10  ,over0 ); 
 WaitVsync(1);  
@@ -1363,7 +1410,7 @@ void showtimesup()
 FadeOut(0, true);
 Screen.scrollX = 0;
 initlevel();
-MoveSprite(0 ,-20 ,-20 ,2 ,3);
+MoveSprite(0 ,-20 ,-20 ,2 ,2);
 MoveSprite(owlIndex ,-20 ,-20  ,2 ,2);
 DrawMap2(  11, 10  ,timeup0 ); 
 WaitVsync(1);  
@@ -1380,7 +1427,7 @@ void showcongratulation()
 FadeOut(0, true);
 Screen.scrollX = 0;
 initlevel();
-MoveSprite(0 ,-20 ,-20 ,2 ,3);
+MoveSprite(0 ,-20 ,-20 ,2 ,2);
 MoveSprite(owlIndex ,-20 ,-20  ,2 ,2);
 DrawMap2(  9, 10  ,congra0 ); 
 FadeIn(0, true);
@@ -1411,7 +1458,7 @@ player.y = 191;
 destX = 0;
 level = 0;
 MoveSprite(owlIndex , - 20 , -20 ,2 ,2);
-MoveSprite(0 , - 20 , -20 ,2 ,3);  
+MoveSprite(0 , - 20 , -20 ,2 ,2);  
 while(introplaying) playintro();
     
 score = 0;
@@ -1439,22 +1486,26 @@ died = false;
 timeisup = false;    
 Levelx = 0;
 scrolltiles = 0;
+player2.speed = 1;
 player2.x = 21;
 player2.y = 191;
+player.speed = 1;
 player.x = 8;
 player.y = 191;
 destX = 0;
 player2.touchground = true;
+player2.jumping = false;
+player2.jumpreleased = true;
 player.touchground = true;
 player.jumping = false;
 player.jumpreleased = true;
 initlevel();
 initmonster();
-MapSprite2(0 ,melli0 ,0);
-MapSprite2(spriteInd ,man0 ,0);
+MapSprite2(0 ,pac0 ,0);
+MapSprite2(spriteInd ,run0 ,0);
 MapSprite2(owlIndex ,owl0 ,0);   
 MoveSprite(owlIndex , - 20 , -20 ,2 ,2);
-MoveSprite(0 , - 20 , -20 ,2 ,3);    
+MoveSprite(0 , - 20 , -20 ,2 ,2);    
 leveltime = 99;
 time = 0;
 bonus = 0;
@@ -1496,6 +1547,17 @@ updatetime(time);
     TriggerFx(9,0xff,true);
     WaitVsync(240); 
 
+    };
+    if ( player2.y > 240) 
+    {
+    player2.y = player.y;
+    //died = true;
+    //lives--;    
+    //isplaying = false; 
+    //play = false;
+   // bonus = 0; 
+   // TriggerFx(9,0xff,true);
+   //WaitVsync(240); 
     };
 
     if (timeisup)
