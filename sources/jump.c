@@ -207,6 +207,7 @@ typedef struct Player{
     bool bpressed;
     bool ypressed;
     bool bananaBool;
+    bool killer;
     uint8_t jumpcounter;
     uint8_t aniframe;
 } Player;
@@ -320,7 +321,7 @@ if ( joy&BTN_B && player.touchground) {
 	if(bananaCount > 0 && player.bpressed == false)
 	{
 	bananaCount = bananaCount - 1;
-    player.bananaBool = true;
+    player.killer = true;
 	player.bpressed = true;
 	};
 };  
@@ -384,19 +385,31 @@ if (player.y < oldy ) if (checkcollide( player.x - 3 , player.y -21, 0 )&1 || ch
                                                                                                                                  };    
 if (player.x > oldx ) if (checkcollide( player.x + 5 , player.y - 3 ,0 )&1 || checkcollide( player.x + 5 , player.y - 20,0 )&1)  player.x = oldx;  
 if (player.x < oldx ) if (checkcollide( player.x - 4 , player.y - 3 ,0 )&1 || checkcollide( player.x - 4 , player.y - 20,0 )&1)  player.x = oldx; 
-if (player.y > oldy )   checkmonster(player.x + 4, player.y ,1 );
-if (player.y > oldy )   checkmonster(player.x - 4, player.y ,1 );
-if (player.y > oldy )   checkmonster(player.x , player.y ,1 );
-checkmonster(player.x +4, player.y -3,0 );
-checkmonster(player.x +4, player.y -19,0 );
-checkmonster(player.x -3, player.y -3 ,0);
-checkmonster(player.x -3, player.y -19 ,0);  
-checkmonster(player.x , player.y -22 ,0);
-if (player.y > oldy )   checkmonster(player.x + 4, player.y ,0 );
+//if (player.y > oldy )   checkmonster(player.x + 4, player.y ,1 );
+//if (player.y > oldy )   checkmonster(player.x - 4, player.y ,1 );
+//if (player.y > oldy )   checkmonster(player.x , player.y ,1 );
+if(player.killer == true)
+{
+checkmonster(player.x +4, player.y -3,1 );
+checkmonster(player.x +4, player.y -19,1 );
+checkmonster(player.x -3, player.y -3 ,1);
+checkmonster(player.x -3, player.y -19 ,1);  
+checkmonster(player.x , player.y -22 ,1);
+checkplayer(player.x,player.y);
+}
+else{
+    checkmonster(player.x +4, player.y -3,0 );
+    checkmonster(player.x +4, player.y -19,0 );
+    checkmonster(player.x -3, player.y -3 ,0);
+    checkmonster(player.x -3, player.y -19 ,0);  
+    checkmonster(player.x , player.y -22 ,0);
+    checkplayer(player.x,player.y);
+}
+//if (player.y > oldy )   checkmonster(player.x + 4, player.y ,0 );
 player.ximpulse = 0;    
 player.yimpulse = 0;
-if ( player.x < 8 ) player.x = player2.x;   // Increase time penalty herer
-if ( player.x > 232 ) player.x = player2.x;    
+if ( player.x < 8 ) player.x = player2.x - 30;   // Increase time penalty herer
+if ( player.x > 232 ) player.x = player2.x - 30;    
 
 
     
@@ -513,15 +526,6 @@ if (player2.y < oldy ) if (checkcollide( player2.x - 3 , player2.y -21, 0 )&1 ||
                                                                                                                                  };    
 if (player2.x > oldx ) if (checkcollide( player2.x + 5 , player2.y - 3 ,0 )&1 || checkcollide( player2.x + 5 , player2.y - 20,0 )&1)  player2.x = oldx;  
 if (player2.x < oldx ) if (checkcollide( player2.x - 4 , player2.y - 3 ,0 )&1 || checkcollide( player2.x - 4 , player2.y - 20,0 )&1)  player2.x = oldx; 
-//if (player2.y > oldy )   checkmonster(player2.x + 4, player2.y ,1 );
-//if (player2.y > oldy )   checkmonster(player2.x - 4, player2.y ,1 );
-//if (player2.y > oldy )   checkmonster(player2.x , player2.y ,1 );
-//checkmonster(player2.x +4, player2.y -3,0 );
-//checkmonster(player2.x +4, player2.y -19,0 );
-//checkmonster(player2.x -3, player2.y -3 ,0);
-//checkmonster(player2.x -3, player2.y -19 ,0);  
-//checkmonster(player2.x , player2.y -22 ,0);
-//if (player2.y > oldy )   checkmonster(player2.x + 4, player2.y ,0 );
 player2.ximpulse = 0;    
 player2.yimpulse = 0;
 if ( player2.x < 8 ) player2.x = player.x;   // Increase time penalty herer
@@ -1064,13 +1068,27 @@ if (owl.onscreen)
 if (!owl.alive) { MapSprite2(owlIndex , owl1 ,0); MoveSprite(owlIndex , owl.x, owl.y  ,2 ,2);return;}; 
 if (aniframe < 10 ) 
 {
+    if(player.killer == true)
+    {
+    MoveSprite(owlIndex , owl.x, owl.y  ,2 ,2);
+    MapSprite2(owlIndex , owl1 ,0); 
+    }
+    else{
     MoveSprite(owlIndex , owl.x, owl.y  ,2 ,2);
     MapSprite2(owlIndex , owl0 ,0); 
+    }
 }
 else
 {
+    if(player.killer == true)
+    {
+    MoveSprite(owlIndex , owl.x -1 , owl.y  ,2 ,2);
+    MapSprite2(owlIndex , owl1 ,1);
+    }
+    else{
     MoveSprite(owlIndex , owl.x -1 , owl.y  ,2 ,2);
     MapSprite2(owlIndex , owl0 ,1); 
+    }
 };
 };
     
@@ -1127,7 +1145,19 @@ if (blob.onscreen)
 
     
 }
-
+void checkplayer(int x,int y)
+{
+    if(x >= player2.x - 10 && x <= player2.x + 10 && y >= player2.y - 10 && y <= player2.y + 10)
+    {   
+    died = true;
+    lives--;    
+    isplaying = false; 
+    play = false;
+    bonus = 0; 
+    TriggerFx(9,0xff,true);
+    WaitVsync(240); 
+    }
+}
 void checkmonster(int x, int y,int z)
 {
 if (!MonsteronScreen) return;
@@ -1166,7 +1196,7 @@ if   (owl.onscreen && owl.alive)
     {
      died = true;
     lives--;    
-    isplaying = false; 
+    isplaying = false;
     play = false;
     bonus = 0; 
     TriggerFx(9,0xff,true);
@@ -1239,7 +1269,7 @@ MonsteronScreen = false;
 
 void movelevel()
 {
-if (player.x >= 150 && (scrolltiles + 15 <= levelwidth )) {
+if (player2.x >= 150 && (scrolltiles + 15 <= levelwidth ) || player.x >= 150 && (scrolltiles + 15 <= levelwidth )) {
 Scroll(1 ,0);   
 Levelx  = Levelx + 1;
 player.x = player.x - 1;
@@ -1277,15 +1307,18 @@ introplaying = true;
 Levelx = 0;
 scrolltiles = 0;
 player2.speed = 1;
-player2.x = 21;
+player2.x = 38;
 player2.y = 191;
 player2.touchground = true;
+player2.jumping = false;
+player2.jumpreleased = true;
 player.speed = 1;
 player.x = 8;
 player.y = 191;
 player.touchground = true;
 player.jumping = false;
 player.jumpreleased = true;
+player.killer = false;
 initlevel();
 initmonster();
 setheadline();    
@@ -1310,6 +1343,10 @@ player.direction = 'r';
 player.action = 'w';
 player.facing = 0;
 player.ximpulse = 1; 
+player2.direction = 'r';
+player2.action = 'w';
+player2.facing = 0;
+player2.ximpulse = 1; 
 FadeIn(1, true);
 while(introplaying )
 {
@@ -1326,7 +1363,11 @@ drawplayer2();
 
 
 player.ximpulse = 1;
-if ( time <= 210 && introplaying ) player.ximpulse = 0;
+player2.ximpulse = 1;
+if ( time <= 210 && introplaying ){
+    player.ximpulse = 0; 
+    player2.ximpulse = 0;
+};
     lx = 12 + destX;
     if (lx >= 32 ) lx = lx - 32;
     
@@ -1344,17 +1385,28 @@ if ( ( time ==  150 || time ==  330  ) && introplaying ) {
 };
 
 
-if  ( ( player.x == 149 && scrolltiles == 14 && Levelx == 2 ) || ( player.x == 149 && scrolltiles == 23 && Levelx == 10 ) || ( player.x == 149 && scrolltiles == 32 && Levelx == 10 )  || ( player.x == 149 && scrolltiles == 42 && Levelx == 10 ) || ( player.x == 149 && scrolltiles == 36 && Levelx == 10 ) )
+if  (( player.x == 119 && scrolltiles == 16 && Levelx == 2 ) || ( player.x == 119 && scrolltiles == 23 && Levelx == 10 ) || ( player.x == 119 && scrolltiles == 32 && Levelx == 10 )  || ( player.x == 119 && scrolltiles == 42 && Levelx == 10 ) || ( player.x == 119 && scrolltiles == 36 && Levelx == 10 ) )
 {
+//DrawMap2(  lx,  18 ,press0 );
 player.action = 'j';
 player.yimpulse = 0;
 player.jumping = true;
 player.touchground = false;
 player.jumpreleased = false;
 player.jumpcounter++ ; 
+
+player2.action = 'j';
+player2.yimpulse = 0;
+player2.jumping = true;
+player2.touchground = false;
+player2.jumpreleased = false;
+player2.jumpcounter++ ; 
 };  
 if ( player.x  == 160 ) time = 0;   
-if ( player.x >= 206 ) player.ximpulse = 0;
+if ( player.x >= 206 ) {
+player.ximpulse = 0; 
+player2.ximpulse = 0;
+};
 if ( player.x >= 180 && time > 420 ) { 
                                  
                                       break; };
@@ -1365,6 +1417,10 @@ player.x = 8;
 player.y = 191;
 MoveSprite(0 ,player.x -7 ,player.y - 21  ,2 ,2);
 
+player2.x = 38;
+player2.y = 191;
+MoveSprite(spriteInd ,player2.x -7 ,player2.y - 21  ,2 ,2);
+
 }
 
 void showgetready()
@@ -1372,10 +1428,10 @@ void showgetready()
 FadeOut(0, true);
 Screen.scrollX = 0;
 initlevel();
-
 printheadline();
 printtileint( 26 ,0,99,2); 
 MoveSprite(0 ,-20 ,-20 ,2 ,2);
+MoveSprite(spriteInd ,-50 ,-20 ,2 ,2);
 MoveSprite(owlIndex ,-20 ,-20  ,2 ,2);
 DrawMap2(  11, 10  ,get0 ); 
 WaitVsync(1);  
@@ -1390,11 +1446,13 @@ WaitVsync(1);
 
 void showgameover()
 {
+    
 FadeOut(0, true);
 Screen.scrollX = 0;
 initlevel();
 MoveSprite(0 ,-20 ,-20 ,2 ,2);
 MoveSprite(owlIndex ,-20 ,-20  ,2 ,2);
+MoveSprite(spriteInd ,-50 ,-20  ,2 ,2);
 DrawMap2(  11, 10  ,over0 ); 
 WaitVsync(1);  
 FadeIn(0, true);
@@ -1412,6 +1470,7 @@ Screen.scrollX = 0;
 initlevel();
 MoveSprite(0 ,-20 ,-20 ,2 ,2);
 MoveSprite(owlIndex ,-20 ,-20  ,2 ,2);
+MoveSprite(spriteInd ,-50 ,-20  ,2 ,2);
 DrawMap2(  11, 10  ,timeup0 ); 
 WaitVsync(1);  
 FadeIn(0, true);
@@ -1429,6 +1488,7 @@ Screen.scrollX = 0;
 initlevel();
 MoveSprite(0 ,-20 ,-20 ,2 ,2);
 MoveSprite(owlIndex ,-20 ,-20  ,2 ,2);
+MoveSprite(spriteInd ,-50 ,-20  ,2 ,2);
 DrawMap2(  9, 10  ,congra0 ); 
 FadeIn(0, true);
 time = 0;
@@ -1455,10 +1515,13 @@ Levelx = 0;
 scrolltiles = 0;
 player.x = 8;
 player.y = 191;
+player2.x = 38;
+player2.y = 191;
 destX = 0;
 level = 0;
 MoveSprite(owlIndex , - 20 , -20 ,2 ,2);
 MoveSprite(0 , - 20 , -20 ,2 ,2);  
+MoveSprite(spriteInd , - 50 , -20 ,2 ,2);
 while(introplaying) playintro();
     
 score = 0;
@@ -1470,6 +1533,8 @@ Levelx = 0;
 scrolltiles = 0;
 player.x = 8;
 player.y = 191;
+player2.x = 38;
+player2.y = 191;
 destX = 0;
 score = 0;
 StartSong(midisong);
@@ -1487,7 +1552,7 @@ timeisup = false;
 Levelx = 0;
 scrolltiles = 0;
 player2.speed = 1;
-player2.x = 21;
+player2.x = 38;
 player2.y = 191;
 player.speed = 1;
 player.x = 8;
@@ -1499,13 +1564,15 @@ player2.jumpreleased = true;
 player.touchground = true;
 player.jumping = false;
 player.jumpreleased = true;
+player.killer = false;
 initlevel();
 initmonster();
 MapSprite2(0 ,pac0 ,0);
 MapSprite2(spriteInd ,run0 ,0);
 MapSprite2(owlIndex ,owl0 ,0);   
 MoveSprite(owlIndex , - 20 , -20 ,2 ,2);
-MoveSprite(0 , - 20 , -20 ,2 ,2);    
+MoveSprite(0 , - 20 , -20 ,2 ,2); 
+MoveSprite(spriteInd , - 50 , -20 ,2 ,2);    
 leveltime = 99;
 time = 0;
 bonus = 0;
