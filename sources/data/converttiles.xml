@@ -37,10 +37,10 @@
             <map var-name="tube3"    left="20" top="4" width="2" height="2"/>
             <map var-name="tube4"    left="16" top="2" width="2" height="2"/>
             <map var-name="tube5"    left="16" top="4" width="2" height="2"/>
-            <map var-name="mush0"    left="22" top="2" width="2" height="2"/>
-            <map var-name="mush1"    left="24" top="2" width="2" height="2"/>
-            <map var-name="mush2"    left="22" top="4" width="2" height="2"/>
-            <map var-name="mush3"    left="24" top="4" width="2" height="2"/>
+            <map var-name="water0"    left="22" top="2" width="2" height="2"/>
+            <map var-name="water1"    left="24" top="2" width="2" height="2"/>
+            <map var-name="water2"    left="22" top="4" width="2" height="2"/>
+            <map var-name="water3"    left="24" top="4" width="2" height="2"/>
             <map var-name="bridge0"  left="4"  top="5" width="1" height="1"/>
             <map var-name="bridge1"  left="5"  top="5" width="1" height="1"/>
             <map var-name="bridge2"  left="6"  top="5" width="1" height="1"/>
