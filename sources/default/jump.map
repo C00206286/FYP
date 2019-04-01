@@ -39,7 +39,7 @@ ly                  0x2               jump.o
 lastStatus          0x1               uzeboxSoundEngine.o
 joypadsConnectionStatus
                     0x1               uzeboxCore.o
-waterscrolls        0x3c              jump.o
+waterscrolls        0x1c              jump.o
 fadeActive          0x1               uzeboxVideoEngine.o
 bl                  0x1               jump.o
 levMovedCnt         0x2               jump.o
@@ -54,7 +54,7 @@ oldx                0x2               jump.o
 level               0x1               jump.o
 play                0x1               jump.o
 bananays            0x14              jump.o
-waterxs             0x3c              jump.o
+waterxs             0x1c              jump.o
 exitgame            0x1               jump.o
 time                0x4               jump.o
 MonsteronScreen     0x1               jump.o
@@ -79,7 +79,7 @@ died                0x1               jump.o
 lx                  0x2               jump.o
 aniframe            0x1               jump.o
 oldy                0x2               jump.o
-waterys             0x3c              jump.o
+waterys             0x1c              jump.o
 scrolltiles         0x1               jump.o
 
 Discarded input sections
@@ -432,7 +432,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0xd11e
+.text           0x0000000000000000     0xd15c
  *(.vectors)
  .vectors       0x0000000000000000       0x70 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
                 0x0000000000000000                __vectors
@@ -890,48 +890,48 @@ END GROUP
                 0x000000000000c5c0       0x6a jump.o
                 0x000000000000c5c0                updatetime
  .text.playintro
-                0x000000000000c62a      0x3ac jump.o
+                0x000000000000c62a      0x3d2 jump.o
                 0x000000000000c62a                playintro
  .text.showgetready
-                0x000000000000c9d6       0xc0 jump.o
-                0x000000000000c9d6                showgetready
+                0x000000000000c9fc       0xc0 jump.o
+                0x000000000000c9fc                showgetready
  .text.showgameover
-                0x000000000000ca96       0xa8 jump.o
-                0x000000000000ca96                showgameover
+                0x000000000000cabc       0xa8 jump.o
+                0x000000000000cabc                showgameover
  .text.showtimesup
-                0x000000000000cb3e       0xa8 jump.o
-                0x000000000000cb3e                showtimesup
+                0x000000000000cb64       0xa8 jump.o
+                0x000000000000cb64                showtimesup
  .text.showcongratulation
-                0x000000000000cbe6       0xa2 jump.o
-                0x000000000000cbe6                showcongratulation
+                0x000000000000cc0c       0xa2 jump.o
+                0x000000000000cc0c                showcongratulation
  .text.startup.main
-                0x000000000000cc88      0x394 jump.o
-                0x000000000000cc88                main
+                0x000000000000ccae      0x3ac jump.o
+                0x000000000000ccae                main
  .text.libgcc.div
-                0x000000000000d01c       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
-                0x000000000000d01c                __udivmodhi4
+                0x000000000000d05a       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x000000000000d05a                __udivmodhi4
  .text.libgcc.div
-                0x000000000000d044       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
-                0x000000000000d044                __divmodhi4
-                0x000000000000d044                _div
+                0x000000000000d082       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x000000000000d082                __divmodhi4
+                0x000000000000d082                _div
  .text.libgcc.div
-                0x000000000000d06c       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
-                0x000000000000d06c                __udivmodsi4
+                0x000000000000d0aa       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x000000000000d0aa                __udivmodsi4
  .text.avr-libc
-                0x000000000000d0b0       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
-                0x000000000000d0b0                __itoa_ncheck
+                0x000000000000d0ee       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
+                0x000000000000d0ee                __itoa_ncheck
  .text.avr-libc
-                0x000000000000d0c6       0x34 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
-                0x000000000000d0c6                __utoa_ncheck
-                0x000000000000d0c8                __utoa_common
+                0x000000000000d104       0x34 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
+                0x000000000000d104                __utoa_ncheck
+                0x000000000000d106                __utoa_common
  .text.avr-libc
-                0x000000000000d0fa       0x20 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strrev.o)
-                0x000000000000d0fa                strrev
-                0x000000000000d11a                . = ALIGN (0x2)
+                0x000000000000d138       0x20 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strrev.o)
+                0x000000000000d138                strrev
+                0x000000000000d158                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000000000d11a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
-                0x000000000000d11a                exit
-                0x000000000000d11a                _exit
+ .fini9         0x000000000000d158        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x000000000000d158                exit
+                0x000000000000d158                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -950,11 +950,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000000000d11a        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .fini0         0x000000000000d158        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x000000000000d11e                _etext = .
+                0x000000000000d15c                _etext = .
 
-.data           0x0000000000800100        0x6 load address 0x000000000000d11e
+.data           0x0000000000800100        0x6 load address 0x000000000000d15c
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800100        0x1 uzeboxVideoEngine.o
@@ -971,7 +971,7 @@ END GROUP
                 0x0000000000800106                _edata = .
                 0x0000000000800106                PROVIDE (__data_end, .)
 
-.bss            0x0000000000800106      0x9d9
+.bss            0x0000000000800106      0x979
                 0x0000000000800106                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x0000000000800106      0x772 uzeboxVideoEngineCore.o
@@ -1025,7 +1025,7 @@ END GROUP
                 0x0000000000800926                fadeActive
                 0x0000000000800927                currFadeFrame
                 0x0000000000800928                fadeStep
- COMMON         0x0000000000800929      0x1b6 jump.o
+ COMMON         0x0000000000800929      0x156 jump.o
                 0x0000000000800929                bridges
                 0x0000000000800959                timeisup
                 0x000000000080095a                blob
@@ -1033,46 +1033,46 @@ END GROUP
                 0x0000000000800981                introplaying
                 0x0000000000800982                ly
                 0x0000000000800984                waterscrolls
-                0x00000000008009c0                bl
-                0x00000000008009c1                levMovedCnt
-                0x00000000008009c3                bananay
-                0x00000000008009c5                score
-                0x00000000008009c7                bananaxs
-                0x00000000008009db                oldx
-                0x00000000008009dd                level
-                0x00000000008009de                play
-                0x00000000008009df                bananays
-                0x00000000008009f3                waterxs
-                0x0000000000800a2f                exitgame
-                0x0000000000800a30                time
-                0x0000000000800a34                MonsteronScreen
-                0x0000000000800a35                player2
-                0x0000000000800a51                lives
-                0x0000000000800a52                owl
-                0x0000000000800a5d                destX
-                0x0000000000800a5e                bananax
-                0x0000000000800a60                dp
-                0x0000000000800a62                diamonds
-                0x0000000000800a94                bonus
-                0x0000000000800a96                finished
-                0x0000000000800a97                isplaying
-                0x0000000000800a98                leveltime
-                0x0000000000800a99                oldx2
-                0x0000000000800a9b                Levelx
-                0x0000000000800a9c                died
-                0x0000000000800a9d                lx
-                0x0000000000800a9f                aniframe
-                0x0000000000800aa0                oldy
-                0x0000000000800aa2                waterys
-                0x0000000000800ade                scrolltiles
-                0x0000000000800adf                PROVIDE (__bss_end, .)
-                0x000000000000d11e                __data_load_start = LOADADDR (.data)
-                0x000000000000d124                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000000008009a0                bl
+                0x00000000008009a1                levMovedCnt
+                0x00000000008009a3                bananay
+                0x00000000008009a5                score
+                0x00000000008009a7                bananaxs
+                0x00000000008009bb                oldx
+                0x00000000008009bd                level
+                0x00000000008009be                play
+                0x00000000008009bf                bananays
+                0x00000000008009d3                waterxs
+                0x00000000008009ef                exitgame
+                0x00000000008009f0                time
+                0x00000000008009f4                MonsteronScreen
+                0x00000000008009f5                player2
+                0x0000000000800a11                lives
+                0x0000000000800a12                owl
+                0x0000000000800a1d                destX
+                0x0000000000800a1e                bananax
+                0x0000000000800a20                dp
+                0x0000000000800a22                diamonds
+                0x0000000000800a54                bonus
+                0x0000000000800a56                finished
+                0x0000000000800a57                isplaying
+                0x0000000000800a58                leveltime
+                0x0000000000800a59                oldx2
+                0x0000000000800a5b                Levelx
+                0x0000000000800a5c                died
+                0x0000000000800a5d                lx
+                0x0000000000800a5f                aniframe
+                0x0000000000800a60                oldy
+                0x0000000000800a62                waterys
+                0x0000000000800a7e                scrolltiles
+                0x0000000000800a7f                PROVIDE (__bss_end, .)
+                0x000000000000d15c                __data_load_start = LOADADDR (.data)
+                0x000000000000d162                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800adf      0x421
+.noinit         0x0000000000800a7f      0x481
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
- *fill*         0x0000000000800adf       0x21 
+ *fill*         0x0000000000800a7f       0x81 
  .noinit        0x0000000000800b00      0x400 uzeboxVideoEngineCore.o
                 0x0000000000800b00                vram
                 0x0000000000800f00                overlay_vram
@@ -1183,7 +1183,7 @@ END GROUP
  .debug_abbrev  0x0000000000000c84      0x3c5 uzeboxVideoEngine.o
  .debug_abbrev  0x0000000000001049      0x38d jump.o
 
-.debug_line     0x0000000000000000     0x5a34
+.debug_line     0x0000000000000000     0x5a7c
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
  .debug_line    0x000000000000001a     0x1663 uzeboxVideoEngineCore.o
@@ -1191,7 +1191,7 @@ END GROUP
  .debug_line    0x0000000000001b98      0x879 uzeboxSoundEngine.o
  .debug_line    0x0000000000002411      0x577 uzeboxSoundEngineCore.o
  .debug_line    0x0000000000002988      0x9cb uzeboxVideoEngine.o
- .debug_line    0x0000000000003353     0x26e1 jump.o
+ .debug_line    0x0000000000003353     0x2729 jump.o
 
 .debug_frame    0x0000000000000000      0xc7c
  *(.debug_frame)
