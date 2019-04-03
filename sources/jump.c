@@ -103,20 +103,20 @@ const char level4[] PROGMEM ={
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 };
 const char level5[] PROGMEM ={
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,37,38,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,3 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,3 ,3 ,3 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,41,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,2 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,2 ,2 ,2 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,2 ,2 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,41,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,3 ,2 ,3 ,3 ,2 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,4 ,0 ,50,0 ,4 ,0 ,0 ,0 ,0, 0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,31,33,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,2 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,25,26,
-0 ,0 ,0 ,4 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,32,34,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,27,28,
-1 ,5 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,6 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,5 ,0 ,6 ,1 ,1 ,1 ,1 ,1 ,5 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,6 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,5 ,0 ,8 ,0 ,8 ,0 ,6 ,1 ,5 ,0 ,6 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,4,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,3 ,4 ,3 ,3 ,4 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0, 0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,25,26,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,21,0 ,0 ,0 ,21,4 ,0 ,21,21,21,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,27,28,
+4 ,4 ,4 ,4 ,4 ,4 ,0 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,5 ,0 ,6 ,4 ,4 ,4 ,4 ,4 ,5 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,6 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,5 ,0 ,8 ,0 ,8 ,0 ,6 ,4 ,5 ,0 ,6 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,
+62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,
 };
 const char level6[] PROGMEM ={
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,
@@ -237,13 +237,13 @@ Monster blob;
 bool MonsteronScreen;
 bool introplaying;
 #define maxlevel  9
-#define startlevel  1
+#define startlevel  5
 uint8_t Levelx;
 #define levelwidth  90
 uint8_t scrolltiles;
 uint8_t destX;
 uint8_t aniframe;
-uint8_t bananaCount = 1000;
+uint8_t bananaCount = 0;
 int score;
 int levMovedCnt;
 #define maxdiamonds 25
@@ -255,6 +255,7 @@ int bananax;
 int bananay;
 int bananaxs[10];
 int bananays[10];
+int bananascrolls[10];
 int waterxs[14];
 int waterys[14];
 int waterscrolls[14];
@@ -283,7 +284,13 @@ bool play;
 
 void moveplayer()
 {
- 
+if(player.killer == true)
+{
+    player.speed = 2;
+}
+else{
+    player.speed = 1;
+}
 player.mushroomCount = 10;
 unsigned int joy=ReadJoypad(0);
 if(player.stuck)
@@ -312,6 +319,7 @@ player.direction = 'r';
 player.action = 'w';
 player.facing = 0;
 player.ximpulse = player.speed; 
+
 };
 if ( !(joy&BTN_A) ) {
 player.yimpulse = 0;
@@ -323,7 +331,7 @@ if ( !(joy&BTN_B) ) {
 player.bpressed = false;
 };
 if ( joy&BTN_B && player.touchground) {
-	if(bananaCount > 0 && player.bpressed == false)
+	if(player.bpressed == false) // check count here
 	{
 	bananaCount = bananaCount - 1;
     player.killer = true;
@@ -337,7 +345,7 @@ if ( joy&BTN_Y) {
 	if(player.mushroomCount > 0 && player.ypressed == false)
 	{
 	player.mushroomCount = player.mushroomCount - 1;
-	player.speed = 10;
+	//player.speed = 10;
 	player.ypressed = true;
 	};
 };    
@@ -516,7 +524,7 @@ if(checkBanana(player2.x + 4, player2.y ,1) == 1)
 } 
 if(player2.bananaBool == true)
 {
-makeBanana2(player2.x + 4, player2.y,1);
+makeBanana2(player2.x + 4, player2.y,scrolltiles);
 player2.bananaBool = false;
 }
 checkcollide( player2.x, player2.y - 4 ,1);
@@ -651,7 +659,13 @@ void initlevel()
      		{
                 for (  ly = 0; ly < 28; ly++ )
                 {
-          	         DrawMap2(lx ,ly ,blue);
+                    if(level == 5)
+                    {
+          	         DrawMap2(lx ,ly ,black);
+                    }
+                    else{
+                      DrawMap2(lx ,ly ,blue);  
+                    }
                 }
      		}
 }
@@ -693,7 +707,15 @@ if ( level == 9 )   c=pgm_read_byte(&(level9[(yi*levelwidth)+xi]));
     if ( c == 1 ) DrawMap2(destx  ,yi *2  ,ground);
     if ( c == 2 ) DrawMap2(destx  ,yi *2  ,block0);
     if ( c == 3 ) DrawMap2(destx  ,yi *2  ,block1);
-    if ( c == 4 ) DrawMap2(destx  ,yi *2  ,block2);
+    if ( c == 4 ) {
+        if(level == 5)
+        {
+            DrawMap2(destx  ,yi *2  ,blackblock);
+        }
+        else{
+            DrawMap2(destx  ,yi *2  ,block2);
+        }
+    }
     if ( c == 5 ) DrawMap2(destx  ,yi *2  ,ground1);
     if ( c == 6 ) DrawMap2(destx  ,yi *2  ,ground2);
     if ( c == 7 ) DrawMap2(destx  ,yi *2  ,block3);
@@ -706,10 +728,10 @@ if ( level == 9 )   c=pgm_read_byte(&(level9[(yi*levelwidth)+xi]));
     if ( c == 14 ) DrawMap2(destx ,yi *2  ,tube3);
     if ( c == 15 ) DrawMap2(destx ,yi *2  ,tube4);
     if ( c == 16 ) DrawMap2(destx ,yi *2  ,tube5);
-    if ( c == 31 ) DrawMap2(destx ,yi *2  ,bush1);
-    if ( c == 32 ) DrawMap2(destx ,yi *2  ,bush2);
-    if ( c == 33 ) DrawMap2(destx ,yi *2  ,bush3);
-    if ( c == 34 ) DrawMap2(destx ,yi *2  ,bush4);
+    if ( c == 31 ) DrawMap2(destx ,yi *2  ,fire1);
+    if ( c == 32 ) DrawMap2(destx ,yi *2  ,fire2);
+    if ( c == 33 ) DrawMap2(destx ,yi *2  ,black);
+    if ( c == 34 ) DrawMap2(destx ,yi *2  ,blackblock);
     if ( c == 35 ) DrawMap2(destx ,yi *2  ,cloud0);
     if ( c == 36 ) DrawMap2(destx ,yi *2  ,cloud1);
     if ( c == 37 ) DrawMap2(destx ,yi *2  ,cloud2);
@@ -728,7 +750,8 @@ if ( c == 24 ) DrawMap2(destx ,yi *2  ,cloud0);
     if ( c == 30 ) {DrawMap2(destx ,yi *2  ,spike1); DrawMap2(destx + 1 ,yi *2  ,spike1); };
     if ( c == 41 ) DrawMap2(destx ,yi *2  ,diamond0); 
     if ( c == 50 ) setowl(destx,  yi *2);    
-    if ( c == 51 ) setblob(destx, yi *2);    
+    if ( c == 51 ) setblob(destx, yi *2);  
+    if ( c == 62 ) DrawMap2(destx ,yi *2  ,fireground);  
     }
     }
 
@@ -743,17 +766,6 @@ void makeWater(int x, int y, int z){
 	//waterys[0] = y;
 
     waterspwncnt = waterspwncnt + 1;
-    /*if (aniframe > 5 && aniframe <= 10 )   
-{
-    DrawMap2(destx ,yi *2  ,water1);
-} 
-if (aniframe > 10 && aniframe <= 15)
-{
-    DrawMap2(destx ,yi *2  ,water2);
-}
-if (aniframe > 15 && aniframe <= 20){
-    DrawMap2(destx ,yi *2  ,water3);
-}*/
 }
 void updateWater(){
     for(int i = 0; i <= waterspwncnt - 1; i++)
@@ -767,17 +779,30 @@ void updateWater(){
             waterys[i] = 40;
             waterspwncnt = 0;
         }
-if (aniframe <= 7)
+if(level == 5)
 {
-    DrawMap2(x ,y,water3);
-} 
-        if (aniframe > 7 && aniframe <= 14 )   
-{
-    DrawMap2(x ,y,water1);
-} 
-if (aniframe > 14 && aniframe <= 20)
-{
-    DrawMap2(x ,y,water2);
+    if (aniframe <= 10)
+    {
+        DrawMap2(x ,y,fire1);
+    } 
+            if (aniframe > 7 && aniframe <= 14 )   
+    {
+        DrawMap2(x ,y,fire2);
+    } 
+}
+else{
+    if (aniframe <= 7)
+    {
+        DrawMap2(x ,y,water3);
+    } 
+            if (aniframe > 7 && aniframe <= 14 )   
+    {
+        DrawMap2(x ,y,water1);
+    } 
+    if (aniframe > 14 && aniframe <= 20)
+    {
+        DrawMap2(x ,y,water2);
+    }
 }
 //if (aniframe > 15 && aniframe <= 20){
  //   DrawMap2(x ,y,water3);
@@ -804,12 +829,36 @@ if (level == 7)    c=pgm_read_byte(&(level7[(yi*levelwidth)+scrolltiles+16]));
 if (level == 8)    c=pgm_read_byte(&(level8[(yi*levelwidth)+scrolltiles+16]));
 if (level == 9)    c=pgm_read_byte(&(level9[(yi*levelwidth)+scrolltiles+16]));
     xi = yi << 1;
-    if ( c == 0 ) DrawMap2(destX,xi  ,bigblue0);
-    if ( c == 0 && yi == 12 ) DrawMap2(destX,xi + 1  ,bigblue0);    
+    if ( c == 0 ) {
+        if(level == 5)
+        {
+        DrawMap2(destX,xi  ,black);
+        }
+        else{
+        DrawMap2(destX,xi  ,bigblue0); 
+        }
+    }
+    if ( c == 0 && yi == 12 ) {
+        if(level == 5)
+        {
+        DrawMap2(destX,xi + 1,black);
+        }
+        else{
+        DrawMap2(destX,xi + 1,bigblue0); 
+        }  
+    } 
     if ( c == 1 ) DrawMap2(destX  ,xi  ,ground);
-    if ( c == 2 ) DrawMap2(destX  ,xi  ,block0);
+    if ( c == 2 ) DrawMap2(destX,xi  ,block0);  
     if ( c == 3 ) DrawMap2(destX  ,xi  ,block1);
-    if ( c == 4 ) DrawMap2(destX  ,xi  ,block2);
+    if ( c == 4 ) {
+        if(level == 5)
+        {
+        DrawMap2(destX,xi  ,blackblock);
+        }
+        else{
+        DrawMap2(destX,xi  ,block2); 
+        }
+    }
     if ( c == 5 ) DrawMap2(destX  ,xi  ,ground1);
     if ( c == 6 ) DrawMap2(destX  ,xi  ,ground2);
     if ( c == 7 ) DrawMap2(destX  ,xi  ,block3);
@@ -822,10 +871,10 @@ if (level == 9)    c=pgm_read_byte(&(level9[(yi*levelwidth)+scrolltiles+16]));
     if ( c == 14 ) DrawMap2(destX ,xi  ,tube3);
     if ( c == 15 ) DrawMap2(destX ,xi  ,tube4);
     if ( c == 16 ) DrawMap2(destX ,xi  ,tube5);
-    if ( c == 31 ) DrawMap2(destX ,xi  ,bush1);
-    if ( c == 32 ) DrawMap2(destX ,xi  ,bush2);
-    if ( c == 33 ) DrawMap2(destX ,xi  ,bush3);
-    if ( c == 34 ) DrawMap2(destX ,xi  ,bush4);
+    if ( c == 31 ) DrawMap2(destX ,xi  ,fire1);
+    if ( c == 32 ) DrawMap2(destX ,xi  ,fire2);
+    if ( c == 33 ) DrawMap2(destX ,xi  ,black);
+    if ( c == 34 ) DrawMap2(destX ,xi  ,blackblock);
     if ( c == 35 ) DrawMap2(destX ,xi  ,cloud0);
     if ( c == 36 ) DrawMap2(destX ,xi  ,cloud1);
     if ( c == 37 ) DrawMap2(destX ,xi  ,cloud2);
@@ -843,6 +892,7 @@ if (level == 9)    c=pgm_read_byte(&(level9[(yi*levelwidth)+scrolltiles+16]));
     if ( c == 41 ) DrawMap2(destX ,xi  ,diamond0);
     if ( c == 50 ) {DrawMap2(destX,xi  ,bigblue0);setowl(  destX ,xi );};
     if ( c == 51 ) {DrawMap2(destX,xi  ,bigblue0);setblob( destX ,xi );};
+    if ( c == 62 ) DrawMap2(destX ,xi  ,fireground);
     }
 //block2 -> block1
     
@@ -867,12 +917,10 @@ void makeBanana2(int x, int y,int z)
 	DrawMap2(  lx ,  ly  ,banana );
     bananax = lx;
 	bananay = ly;
-    UZEMHEX= bananaxs; 
-    UZEMCHR = "X";
     //UZEMHEX='\n';
 	bananaxs[banspwncnt] = bananax;
 	bananays[banspwncnt] = bananay;
-    UZEMHEX= bananaxs; 
+    bananascrolls[banspwncnt] = z;
     //UZEMHEX='\n';
 	banspwncnt = banspwncnt + 1;
     //if(banspwncnt == 10){
@@ -895,16 +943,36 @@ ly = (ly * 2) -2;
 
 for(int i = 0; i < banspwncnt; i++)
 {
-	if(bananaxs[i] == lx && bananays[i] == ly)
+    if(bananascrolls[i] <= scrolltiles - 10)
+    {
+        bananaxs[i] = 0;
+        bananays[i] = 0;
+        bananascrolls[i] = 0;
+        if(banspwncnt > 1) // only delete if it is not the only thing in the array.
+    {
+                for(int j = i; j < banspwncnt - 1; j++)
+            {
+            bananaxs[j] = bananaxs[j + 1];
+            bananays[j] = bananays[j + 1];
+            bananascrolls[j] = bananascrolls[j+1];
+            }
+    }
+    banspwncnt = banspwncnt - 1;
+    }
+	else if(bananaxs[i] == lx && bananays[i] == ly)
 	{ 
         DrawMap2(  lx    ,  ly,bigblue0 ); 
 	    DrawMap2(  lx    ,  ly + 1,banana2 );
+        bananaxs[i] = 0;
+        bananays[i] = 0;
+        bananascrolls[i] = 0;
     if(banspwncnt > 1) // only delete if it is not the only thing in the array.
     {
                 for(int j = i; j < banspwncnt - 1; j++)
             {
             bananaxs[j] = bananaxs[j + 1];
             bananays[j] = bananays[j + 1];
+            bananascrolls[j] = bananascrolls[j+1];
             }
     }
    // else{
@@ -941,6 +1009,15 @@ if (level == 9 ) bl=pgm_read_byte(&(level9[((ly  ) *levelwidth)+ ( lx )  + scrol
     
 if (bl == 26 || bl == 28 ) finished = true;
 if ((bl == 29 || bl == 30 ) && z == 3 && play == true ) { 
+    died = true;
+    lives--;    
+    isplaying = false; 
+    play = false;
+    bonus = 0;  
+    TriggerFx(9,0xff,true);
+    WaitVsync(240);     
+};
+if (bl == 21 && level == 5 && play == true ) { 
     died = true;
     lives--;    
     isplaying = false; 
@@ -1371,6 +1448,7 @@ void playintro()
 
 introplaying = true;
 waterspwncnt = 0;
+banspwncnt = 0;
 Levelx = 0;
 scrolltiles = 0;
 player2.speed = 1;
@@ -1582,6 +1660,7 @@ SetUserPostVsyncCallback(vsync_callback);
 while(1)
 {
 waterspwncnt = 0;
+banspwncnt = 0;
 introplaying = true; 
 Levelx = 0;
 scrolltiles = 0;
@@ -1608,6 +1687,7 @@ player.y = 191;
 player2.x = 38;
 player2.y = 191;
 waterspwncnt = 0;
+banspwncnt = 0;
 destX = 0;
 score = 0;
 StartSong(midisong);
@@ -1624,6 +1704,7 @@ died = false;
 timeisup = false;    
 Levelx = 0;
 waterspwncnt = 0;
+banspwncnt = 0;
 scrolltiles = 0;
 player2.speed = 1;
 player2.x = 38;

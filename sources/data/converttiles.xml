@@ -8,7 +8,7 @@
             <map var-name="block0"   left="0"  top="0" width="2" height="2"/>
             <map var-name="block1"   left="2"  top="0" width="2" height="2"/>
             <map var-name="ground"   left="4"  top="0" width="2" height="3"/>
-	        <map var-name="ground1"  left="6"  top="0" width="2" height="3"/>
+	    <map var-name="ground1"  left="6"  top="0" width="2" height="3"/>
             <map var-name="ground2"  left="8"  top="0" width="2" height="3"/>
             <map var-name="ground3"  left="10" top="0" width="2" height="3"/>            
             <map var-name="block4"   left="12" top="0" width="2" height="2"/>
@@ -22,11 +22,13 @@
             <map var-name="diamond0" left="8"  top="3" width="2" height="2"/>
 	    <map var-name="banana"   left="10" top="3" width="2" height="2"/>
 	    <map var-name="banana2"  left="10" top="5" width="2" height="1"/>
-            <map var-name="blue"     left="0"  top="2" width="1" height="1"/>
-            <map var-name="bush1"    left="0"  top="2" width="2" height="2"/>
-            <map var-name="bush2"    left="0"  top="4" width="2" height="2"/>
-            <map var-name="bush3"    left="2"  top="2" width="2" height="2"/>
-            <map var-name="bush4"    left="2"  top="4" width="2" height="2"/>
+            <map var-name="blue"     left="24"  top="0" width="1" height="1"/>
+            <map var-name="fire1"    left="0"  top="2" width="2" height="2"/>
+            <map var-name="fire2"    left="2"  top="2" width="2" height="2"/>
+            <map var-name="black"    left="0"  top="4" width="2" height="2"/>
+	    <map var-name="lilblack" left="0"  top="4" width="1" height="1"/>
+            <map var-name="blackblock" left="2"  top="4" width="2" height="2"/>
+	    <map var-name="fireground" left="13" top="0" width="2" height="2"/>
             <map var-name="cloud0"   left="12" top="2" width="2" height="2"/>
             <map var-name="cloud1"   left="14" top="2" width="2" height="2"/>
             <map var-name="cloud2"   left="12" top="4" width="2" height="2"/>
