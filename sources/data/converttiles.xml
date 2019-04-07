@@ -47,6 +47,10 @@
             <map var-name="bridge1"  left="5"  top="5" width="1" height="1"/>
             <map var-name="bridge2"  left="6"  top="5" width="1" height="1"/>
             <map var-name="bridge3"  left="7"  top="5" width="1" height="1"/>
+	    <map var-name="drkbridge0"  left="18"  top="5" width="1" height="1"/>
+            <map var-name="drkbridge1"  left="19"  top="5" width="1" height="1"/>
+            <map var-name="drkbridge2"  left="20"  top="5" width="1" height="1"/>
+            <map var-name="drkbridge3"  left="21"  top="5" width="1" height="1"/>
             <map var-name="nb"       left="0"  top="6" width="1" height="1"/>
             <map var-name="n0"       left="1"  top="6" width="1" height="1"/>
             <map var-name="n1"       left="2"  top="6" width="1" height="1"/>

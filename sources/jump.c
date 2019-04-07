@@ -109,13 +109,13 @@ const char level5[] PROGMEM ={
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 , 0, 0,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,3 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,3 ,3 ,3 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,41,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,21,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,21,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,3 ,4 ,3 ,3 ,4 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0, 0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,4 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,25,26,
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,21,0 ,0 ,0 ,21,4 ,0 ,21,21,21,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,21,0 ,0 ,0 ,21,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,41,0 ,0 ,0 ,0 ,0 ,27,28,
-4 ,4 ,4 ,4 ,4 ,4 ,0 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,5 ,0 ,6 ,4 ,4 ,4 ,4 ,4 ,5 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,6 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,5 ,0 ,8 ,0 ,8 ,0 ,6 ,4 ,5 ,0 ,6 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,21,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0, 0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,39,39,39,39,39,39,39,39,39,39,4 ,0 ,0 ,0 ,0 ,50,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0, 0 ,21,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,3 ,4 ,3 ,3 ,4 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0, 0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,25,26,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,21,0 ,0 ,0 ,21,4 ,0 ,21,21,21,0 ,0 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,21,0 ,0 ,0 ,21,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,4 ,4 ,4 ,4 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,27,28,
+4 ,4 ,4 ,4 ,4 ,4 ,0 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,0 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,21,21,21,21,21,21,21,21,21,21,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,0 ,8 ,0 ,8 ,0 ,4 ,4 ,4 ,0 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,4 ,
 62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,62,
 };
 const char level6[] PROGMEM ={
@@ -210,6 +210,7 @@ typedef struct Player{
     bool killer;
     uint8_t jumpcounter;
     uint8_t aniframe;
+    uint8_t bananaCount;
 } Player;
 
 Player player;
@@ -243,7 +244,6 @@ uint8_t Levelx;
 uint8_t scrolltiles;
 uint8_t destX;
 uint8_t aniframe;
-uint8_t bananaCount = 0;
 int score;
 int levMovedCnt;
 #define maxdiamonds 25
@@ -333,7 +333,7 @@ player.bpressed = false;
 if ( joy&BTN_B && player.touchground) {
 	if(player.bpressed == false) // check count here
 	{
-	bananaCount = bananaCount - 1;
+	player.bananaCount = player.bananaCount - 1;
     player.killer = true;
 	player.bpressed = true;
 	};
@@ -386,18 +386,18 @@ if(player.bananaBool == true)
 makeBanana2(player.x + 4, player.y,1);
 player.bananaBool = false;
 }
-checkcollide( player.x, player.y - 4 ,1);
-checkcollide( player.x -3, player.y - 4 ,3);
-checkcollide( player.x +4, player.y - 4 ,3);
+checkcollide( player.x, player.y - 4 ,1,1);
+checkcollide( player.x -3, player.y - 4 ,3,1);
+checkcollide( player.x +4, player.y - 4 ,3,1);
 
-if (player.y < oldy ) checkcollide( player.x, player.y - 22 ,2);
+if (player.y < oldy ) checkcollide( player.x, player.y - 22 ,2,1);
 if (player.y > oldy )  player.touchground = false; 
-if (player.y > oldy ) if (checkcollide( player.x - 3 , player.y,     0 )&1 || checkcollide( player.x + 4 , player.y     ,0 )&1) { player.y = ( player.y / 16 ) * 16 - 1;player.jumping = false; player.touchground = true;player.action = 'w' ;};
-if (player.y < oldy ) if (checkcollide( player.x - 3 , player.y -21, 0 )&1 || checkcollide( player.x + 4 , player.y - 21,0 )&1)  { player.y = oldy;player.jumpcounter = 0;
+if (player.y > oldy ) if (checkcollide( player.x - 3 , player.y,     0,1 )&1 || checkcollide( player.x + 4 , player.y     ,0,1 )&1) { player.y = ( player.y / 16 ) * 16 - 1;player.jumping = false; player.touchground = true;player.action = 'w' ;};
+if (player.y < oldy ) if (checkcollide( player.x - 3 , player.y -21, 0,1 )&1 || checkcollide( player.x + 4 , player.y - 21,0,1 )&1)  { player.y = oldy;player.jumpcounter = 0;
                                                                                                                                   TriggerFx(5,0xff,true);
                                                                                                                                  };    
-if (player.x > oldx ) if (checkcollide( player.x + 5 , player.y - 3 ,0 )&1 || checkcollide( player.x + 5 , player.y - 20,0 )&1)  player.x = oldx;  
-if (player.x < oldx ) if (checkcollide( player.x - 4 , player.y - 3 ,0 )&1 || checkcollide( player.x - 4 , player.y - 20,0 )&1)  player.x = oldx; 
+if (player.x > oldx ) if (checkcollide( player.x + 5 , player.y - 3 ,0,1 )&1 || checkcollide( player.x + 5 , player.y - 20,0,1 )&1)  player.x = oldx;  
+if (player.x < oldx ) if (checkcollide( player.x - 4 , player.y - 3 ,0,1 )&1 || checkcollide( player.x - 4 , player.y - 20,0,1 )&1)  player.x = oldx; 
 //if (player.y > oldy )   checkmonster(player.x + 4, player.y ,1 );
 //if (player.y > oldy )   checkmonster(player.x - 4, player.y ,1 );
 //if (player.y > oldy )   checkmonster(player.x , player.y ,1 );
@@ -421,7 +421,11 @@ else{
 //if (player.y > oldy )   checkmonster(player.x + 4, player.y ,0 );
 player.ximpulse = 0;    
 player.yimpulse = 0;
-if ( player.x < 8 ) player.x = player2.x - 30;   // Increase time penalty herer
+if ( player.x < 8 ){ 
+    lives++;
+    player.x = 30;
+    player.y = 0;
+}
 if ( player.x > 232 ) player.x = player2.x - 30;    
 
 
@@ -472,9 +476,9 @@ if ( !(joy&BTN_B) ) {
 player2.bpressed = false;
 };
 if ( joy&BTN_B && player2.touchground) {
-	if(bananaCount > 0 && player2.bpressed == false)
+	if(player2.bananaCount > 0 && player2.bpressed == false)
 	{
-	bananaCount = bananaCount - 1;
+	player2.bananaCount = player2.bananaCount - 1;
     player2.bananaBool = true;
 	player2.bpressed = true;
 	};
@@ -527,18 +531,18 @@ if(player2.bananaBool == true)
 makeBanana2(player2.x + 4, player2.y,scrolltiles);
 player2.bananaBool = false;
 }
-checkcollide( player2.x, player2.y - 4 ,1);
-checkcollide( player2.x -3, player2.y - 4 ,3);
-checkcollide( player2.x +4, player2.y - 4 ,3);
+checkcollide( player2.x, player2.y - 4 ,1,2);
+checkcollide( player2.x -3, player2.y - 4 ,3,2);
+checkcollide( player2.x +4, player2.y - 4 ,3,2);
 
-if (player2.y < oldy ) checkcollide( player2.x, player2.y - 22 ,2);
+if (player2.y < oldy ) checkcollide( player2.x, player2.y - 22 ,2,2);
 if (player2.y > oldy )  player2.touchground = false; 
-if (player2.y > oldy ) if (checkcollide( player2.x - 3 , player2.y,     0 )&1 || checkcollide( player2.x + 4 , player2.y     ,0 )&1) { player2.y = ( player2.y / 16 ) * 16 - 1;player2.jumping = false; player2.touchground = true;player2.action = 'w' ;};
-if (player2.y < oldy ) if (checkcollide( player2.x - 3 , player2.y -21, 0 )&1 || checkcollide( player2.x + 4 , player2.y - 21,0 )&1)  { player2.y = oldy;player2.jumpcounter = 0;
+if (player2.y > oldy ) if (checkcollide( player2.x - 3 , player2.y,     0,2 )&1 || checkcollide( player2.x + 4 , player2.y     ,0,2 )&1) { player2.y = ( player2.y / 16 ) * 16 - 1;player2.jumping = false; player2.touchground = true;player2.action = 'w' ;};
+if (player2.y < oldy ) if (checkcollide( player2.x - 3 , player2.y -21, 0,2 )&1 || checkcollide( player2.x + 4 , player2.y - 21,0,2 )&1)  { player2.y = oldy;player2.jumpcounter = 0;
                                                                                                                                   TriggerFx(5,0xff,true);
                                                                                                                                  };    
-if (player2.x > oldx ) if (checkcollide( player2.x + 5 , player2.y - 3 ,0 )&1 || checkcollide( player2.x + 5 , player2.y - 20,0 )&1)  player2.x = oldx;  
-if (player2.x < oldx ) if (checkcollide( player2.x - 4 , player2.y - 3 ,0 )&1 || checkcollide( player2.x - 4 , player2.y - 20,0 )&1)  player2.x = oldx; 
+if (player2.x > oldx ) if (checkcollide( player2.x + 5 , player2.y - 3 ,0,2 )&1 || checkcollide( player2.x + 5 , player2.y - 20,0,2 )&1)  player2.x = oldx;  
+if (player2.x < oldx ) if (checkcollide( player2.x - 4 , player2.y - 3 ,0,2 )&1 || checkcollide( player2.x - 4 , player2.y - 20,0,2 )&1)  player2.x = oldx; 
 player2.ximpulse = 0;    
 player2.yimpulse = 0;
 if ( player2.x < 8 ) player2.x = player.x;   // Increase time penalty herer
@@ -633,18 +637,18 @@ for ( lx = 0; lx < 6 && lx < l; lx++)
 {
 //DrawMap2(x + i  + scrolltiles / 2,y, nb ); 
 DrawMap2( lx + x,VRAM_TILES_V, nb ); 
-if (str[lx] == '0' ) DrawMap2(lx + x,VRAM_TILES_V, n0 );  
-if (str[lx] == '1' ) DrawMap2(lx + x,VRAM_TILES_V, n1 ); 
-if (str[lx] == '2' ) DrawMap2(lx + x,VRAM_TILES_V, n2 ); 
-if (str[lx] == '3' ) DrawMap2(lx + x,VRAM_TILES_V, n3 ); 
-if (str[lx] == '4' ) DrawMap2(lx + x,VRAM_TILES_V, n4); 
-if (str[lx] == '5' ) DrawMap2(lx + x,VRAM_TILES_V, n5 ); 
-if (str[lx] == '6' ) DrawMap2(lx + x,VRAM_TILES_V, n6 ); 
-if (str[lx] == '7' ) DrawMap2(lx + x,VRAM_TILES_V, n7 ); 
-if (str[lx] == '8' ) DrawMap2(lx + x,VRAM_TILES_V, n8 ); 
-if (str[lx] == '9' ) DrawMap2(lx + x,VRAM_TILES_V, n9 );
-if (str[lx] == '-' ) DrawMap2(lx + x,VRAM_TILES_V, nm );    
-if (str[lx] == ' ' ) DrawMap2(lx + x,VRAM_TILES_V, nb ); 
+if (str[lx] == '0' ) DrawMap2(lx + x,0, n0 );  
+if (str[lx] == '1' ) DrawMap2(lx + x,0, n1 ); 
+if (str[lx] == '2' ) DrawMap2(lx + x,0, n2 ); 
+if (str[lx] == '3' ) DrawMap2(lx + x,0, n3 ); 
+if (str[lx] == '4' ) DrawMap2(lx + x,0, n4); 
+if (str[lx] == '5' ) DrawMap2(lx + x,0, n5 ); 
+if (str[lx] == '6' ) DrawMap2(lx + x,0, n6 ); 
+if (str[lx] == '7' ) DrawMap2(lx + x,0, n7 ); 
+if (str[lx] == '8' ) DrawMap2(lx + x,0, n8 ); 
+if (str[lx] == '9' ) DrawMap2(lx + x,0, n9 );
+if (str[lx] == '-' ) DrawMap2(lx + x,0, nm );    
+if (str[lx] == ' ' ) DrawMap2(lx + x,0, nb ); 
     
 
 };
@@ -736,7 +740,20 @@ if ( level == 9 )   c=pgm_read_byte(&(level9[(yi*levelwidth)+xi]));
     if ( c == 36 ) DrawMap2(destx ,yi *2  ,cloud1);
     if ( c == 37 ) DrawMap2(destx ,yi *2  ,cloud2);
     if ( c == 38 ) DrawMap2(destx ,yi *2  ,cloud3);
-    if ( c == 39 ) {DrawMap2(destx ,yi *2 ,bridge0);DrawMap2(destx +1 ,yi *2  ,bridge0);DrawMap2(destx  ,yi *2 +1 ,nb);DrawMap2(destx +1 ,yi *2 +1 ,nb);};
+    if ( c == 39 ) {
+        if(level == 5){
+        DrawMap2(destx ,yi *2 ,drkbridge0);
+        DrawMap2(destx +1 ,yi *2  ,drkbridge0);
+        DrawMap2(destx  ,yi *2 +1 ,lilblack);
+        DrawMap2(destx +1 ,yi *2 +1 ,lilblack);
+        }
+        else{
+        DrawMap2(destx ,yi *2 ,bridge0);
+        DrawMap2(destx +1 ,yi *2  ,bridge0);
+        DrawMap2(destx  ,yi *2 +1 ,nb);
+        DrawMap2(destx +1 ,yi *2 +1 ,nb);
+        }
+        };
     if ( c == 21 ) {makeWater(destx,yi *2,destx);}
 
 if ( c == 22 ) DrawMap2(destx ,yi *2  ,cloud0);
@@ -777,17 +794,19 @@ void updateWater(){
         {
             if(level == 5)
             {
-                for(int j = i; j < waterspwncnt - 1; j++)
-                {
-                waterxs[j] = waterxs[j + 1];
-                waterys[j] = waterys[j + 1];
-                waterscrolls[j] = waterscrolls[j+1];
-                }
                 waterspwncnt = waterspwncnt - 1;
+                for(int i = 0; i <= waterspwncnt - 1; i++)
+                {
+                waterxs[i] = waterxs[i + 1];
+                waterys[i] = waterys[i + 1];
+                waterscrolls[i] = waterscrolls[i+1];
+              }
+              
             }
             else{
                 waterxs[i] = 40;
                 waterys[i] = 40;
+                waterscrolls[i] = 40;
                 waterspwncnt = 0;
             }
         }
@@ -891,9 +910,23 @@ if (level == 9)    c=pgm_read_byte(&(level9[(yi*levelwidth)+scrolltiles+16]));
     if ( c == 36 ) DrawMap2(destX ,xi  ,cloud1);
     if ( c == 37 ) DrawMap2(destX ,xi  ,cloud2);
     if ( c == 38 ) DrawMap2(destX ,xi  ,cloud3);
-    if ( c == 39 ) {DrawMap2(destX,xi  ,bridge0);DrawMap2(destX +1 ,xi,bridge0);DrawMap2(destX  ,xi + 1 ,nb);DrawMap2(destX +1 ,xi + 1 ,nb);};
+    if ( c == 39 ) {
+        if(level == 5)
+        {
+        DrawMap2(destX,xi  ,drkbridge0);
+        DrawMap2(destX +1 ,xi,drkbridge0);
+        DrawMap2(destX  ,xi + 1 ,lilblack);
+        DrawMap2(destX +1 ,xi + 1 ,lilblack);
+        }
+        else{
+        DrawMap2(destX,xi  ,bridge0);
+        DrawMap2(destX +1 ,xi,bridge0);
+        DrawMap2(destX  ,xi + 1 ,nb);
+        DrawMap2(destX +1 ,xi + 1 ,nb);
+        }
+        };
     if ( c == 21 ) {
-        makeWater(destX,xi,32);
+        makeWater(destX,xi,30);
     }
     if ( c == 25 ) DrawMap2(destX ,xi  ,door0);	
     if ( c == 26 ) DrawMap2(destX ,xi  ,door1);	
@@ -999,7 +1032,7 @@ for(int i = 0; i < banspwncnt; i++)
 return 0;
 	
 }
-int checkcollide(int x, int y,int z)
+int checkcollide(int x, int y,int z,int playerNum)
 {
 int lx;
 int ly;
@@ -1020,23 +1053,39 @@ if (level == 8 ) bl=pgm_read_byte(&(level8[((ly  ) *levelwidth)+ ( lx )  + scrol
 if (level == 9 ) bl=pgm_read_byte(&(level9[((ly  ) *levelwidth)+ ( lx )  + scrolltiles]));
     
 if (bl == 26 || bl == 28 ) finished = true;
-if ((bl == 29 || bl == 30 ) && z == 3 && play == true ) { 
+if ((bl == 29 || bl == 30 ) && z == 3 && play == true ) {
+    if(playerNum == 1)
+    {
+        lives++;
+        player.x = 30;
+        player.y = 0;
+    } 
+    else{
     died = true;
     lives--;    
     isplaying = false; 
     play = false;
     bonus = 0;  
     TriggerFx(9,0xff,true);
-    WaitVsync(240);     
+    WaitVsync(60);  
+    }   
 };
 if (bl == 21 && level == 5 && play == true ) { 
+    if(playerNum == 2)
+    {
+        lives++;
+        player.x = 30;
+        player.y = 0;
+    }
+    else{
     died = true;
     lives--;    
     isplaying = false; 
     play = false;
     bonus = 0;  
     TriggerFx(9,0xff,true);
-    WaitVsync(240);     
+    WaitVsync(60);   
+    }  
 };
     
     
@@ -1076,7 +1125,14 @@ dp = ((ly  ) *levelwidth)+ ( lx )  + scrolltiles;
     lx = lx * 2 + destX;
     if (lx >= 32 ) lx = lx - 32;
     //DrawMap2(  lx    ,  ly *  2    ,banana );
-    bananaCount = bananaCount + 1;
+    if(playerNum == 1)
+    {
+        player.bananaCount = player.bananaCount + 1;
+    }
+    else if(playerNum == 2)
+    {
+        player2.bananaCount = player2.bananaCount + 1;
+    }
     DrawMap2(  lx    ,  ly *  2    ,block2 );      
     diamonds[xi] = dp;
     break;
@@ -1140,10 +1196,19 @@ dp = ((ly  ) *levelwidth)+ ( lx )  + scrolltiles;
         ly = ly >> 4;
         lx = lx * 2 + destX;
         if (lx >= 32 ) lx = lx - 32;
+        if(level == 5)
+        {
+        if ( bridges[xi].r >  0 && bridges[xi].r <= 8  )  DrawMap2(  lx    ,     ly *  2    ,drkbridge1 );
+        if ( bridges[xi].r >  8 && bridges[xi].r <= 16  )  DrawMap2(  lx    ,     ly *  2    ,drkbridge2 ); 
+        if ( bridges[xi].r > 16 && bridges[xi].r < 24  )  DrawMap2(  lx    ,     ly *  2    ,drkbridge3 );     
+        if ( bridges[xi].r >= 24 ) { bridges[xi].r = 24;DrawMap2(  lx    ,     ly *  2    ,lilblack ); return 0;};
+        }
+        else{
         if ( bridges[xi].r >  0 && bridges[xi].r <= 8  )  DrawMap2(  lx    ,     ly *  2    ,bridge1 );
         if ( bridges[xi].r >  8 && bridges[xi].r <= 16  )  DrawMap2(  lx    ,     ly *  2    ,bridge2 ); 
         if ( bridges[xi].r > 16 && bridges[xi].r < 24  )  DrawMap2(  lx    ,     ly *  2    ,bridge3 );     
-        if ( bridges[xi].r >= 24 ) { bridges[xi].r = 24;DrawMap2(  lx    ,     ly *  2    ,nb ); return 0;};
+        if ( bridges[xi].r >= 24 ) { bridges[xi].r = 24;DrawMap2(  lx    ,     ly *  2    ,nb ); return 0;};  
+        }
         }
         else
         {
@@ -1154,10 +1219,19 @@ dp = ((ly  ) *levelwidth)+ ( lx )  + scrolltiles;
         ly = ly >> 4;
         lx = lx * 2 + destX;
         if (lx >= 32 ) lx = lx - 32;
+        if(level == 5)
+        {
+        if ( bridges[xi].l > 0 && bridges[xi].l <=  8  )  DrawMap2(  lx  + 1  ,     ly *  2    ,drkbridge1 );
+        if ( bridges[xi].l > 8 && bridges[xi].l <= 16 )  DrawMap2(  lx  + 1  ,     ly *  2    ,drkbridge2 ); 
+        if ( bridges[xi].l > 16 && bridges[xi].l <  24  )  DrawMap2(  lx  + 1  ,     ly *  2    ,drkbridge3 );      
+        if ( bridges[xi].l >= 24) { bridges[xi].l = 24;DrawMap2(  lx  + 1  ,  ly *  2    ,lilblack ); return 0;}; 
+        }
+        else{
         if ( bridges[xi].l > 0 && bridges[xi].l <=  8  )  DrawMap2(  lx  + 1  ,     ly *  2    ,bridge1 );
         if ( bridges[xi].l > 8 && bridges[xi].l <= 16 )  DrawMap2(  lx  + 1  ,     ly *  2    ,bridge2 ); 
         if ( bridges[xi].l > 16 && bridges[xi].l <  24  )  DrawMap2(  lx  + 1  ,     ly *  2    ,bridge3 );      
-        if ( bridges[xi].l >= 24) { bridges[xi].l = 24;DrawMap2(  lx  + 1  ,  ly *  2    ,nb ); return 0;}; 
+        if ( bridges[xi].l >= 24) { bridges[xi].l = 24;DrawMap2(  lx  + 1  ,  ly *  2    ,nb ); return 0;};  
+        }
         };
         
         return 1; 
@@ -1177,15 +1251,15 @@ if (bl > 0 && bl <= 20 ) return 1; else return 0;
 
 void printheadline()
 {
-DrawMap2(0,VRAM_TILES_V, score0 );  
+DrawMap2(0,0, score0 );  
 printtileint( 4 ,0,score,4);
 //DrawMap2(8,VRAM_TILES_V, bonus0 );      
 //printtileint( 12 ,0,bonus,1);   
-DrawMap2(11,VRAM_TILES_V, live0 ); 
+DrawMap2(11,0, live0 ); 
 printtileint( 14 ,0,lives,1);  
-DrawMap2(16,VRAM_TILES_V, level0 ); 
+DrawMap2(16,0, level0 ); 
 printtileint( 20 ,0, level,1);  
-DrawMap2(23,VRAM_TILES_V, time0 );
+DrawMap2(23,0, time0 );
 printtileint( 26 ,0,leveltime,2); 
 }
 void printheadlineintro()
@@ -1274,9 +1348,9 @@ if (owl.onscreen)
     
     owl.x2 = owl.x2 + owl.ximpulse;
     owl.x = owl.x2 >> 2;
-    if (owl.y > oldy ) if (checkcollide( owl.x + 3 , owl.y + 16,     0 )&1 || checkcollide( owl.x + 12 , owl.y +16    ,0 )&1) { owl.y = ( owl.y / 16 ) * 16   ;};
-    if (owl.x > oldx ) if (checkcollide( owl.x + 12, owl.y + 8 ,0 )&1 )  { owl.x2 = oldx2; owl.ximpulse =   -1;};
-    if (owl.x < oldx ) if (checkcollide( owl.x + 2 , owl.y + 8 ,0 )&1 )  { owl.x2 = oldx2; owl.ximpulse =   +1;};
+    if (owl.y > oldy ) if (checkcollide( owl.x + 3 , owl.y + 16,     0,0 )&1 || checkcollide( owl.x + 12 , owl.y +16    ,0,0 )&1) { owl.y = ( owl.y / 16 ) * 16   ;};
+    if (owl.x > oldx ) if (checkcollide( owl.x + 12, owl.y + 8 ,0,0 )&1 )  { owl.x2 = oldx2; owl.ximpulse =   -1;};
+    if (owl.x < oldx ) if (checkcollide( owl.x + 2 , owl.y + 8 ,0,0 )&1 )  { owl.x2 = oldx2; owl.ximpulse =   +1;};
     if (owl.y > 240 || owl.y < 0 || owl.x < -16 || owl.x > 240 )  {MonsteronScreen = false;MoveSprite(owlIndex,-20,-20,2,2); owl.onscreen = false;};
 }
 if (blob.onscreen) 
@@ -1289,9 +1363,9 @@ if (blob.onscreen)
     blob.y = blob.y  + gravity + blob.yimpulse;
     blob.x2 = blob.x2 + blob.ximpulse;
     blob.x = blob.x2 >> 2;
-    if (blob.y > oldy ) if (checkcollide( blob.x + 3 , blob.y + 16,     0 )&1 || checkcollide( blob.x + 12 , blob.y +16    ,0 )&1) { blob.y = ( blob.y / 16 ) * 16   ;};
-    if (blob.x > oldx ) if (!(checkcollide( blob.x + 17, blob.y + 17 ,0 )&1) )  { blob.x2 = oldx2; blob.ximpulse =   -2;};
-    if (blob.x < oldx ) if (!(checkcollide( blob.x -  1, blob.y + 17 ,0 )&1) )  { blob.x2 = oldx2; blob.ximpulse =   +2;};
+    if (blob.y > oldy ) if (checkcollide( blob.x + 3 , blob.y + 16,     0,0 )&1 || checkcollide( blob.x + 12 , blob.y +16    ,0,0 )&1) { blob.y = ( blob.y / 16 ) * 16   ;};
+    if (blob.x > oldx ) if (!(checkcollide( blob.x + 17, blob.y + 17 ,0,0 )&1) )  { blob.x2 = oldx2; blob.ximpulse =   -2;};
+    if (blob.x < oldx ) if (!(checkcollide( blob.x -  1, blob.y + 17 ,0,0 )&1) )  { blob.x2 = oldx2; blob.ximpulse =   +2;};
     if (blob.y > 240 || blob.y < 0 || blob.x <= -16 || blob.x > 240 )  {MonsteronScreen = false; MoveSprite(owlIndex,-20,-20,2,2);blob.onscreen = false;};
 }   
 
@@ -1307,7 +1381,7 @@ void checkplayer(int x,int y)
     play = false;
     bonus = 0; 
     TriggerFx(9,0xff,true);
-    WaitVsync(240); 
+    WaitVsync(60); 
     }
 }
 void checkmonster(int x, int y,int z)
@@ -1320,13 +1394,16 @@ if   (owl.onscreen && owl.alive)
    {
     if ( z== 0)
     {
-    died = true;
-    lives--;    
-    isplaying = false; 
-    play = false;
-    bonus = 0;  
-    TriggerFx(9,0xff,true);
-    WaitVsync(240); 
+        lives++;
+        player.x = 30;
+        player.y = 0;
+    //died = true;
+    //lives--;    
+    //isplaying = false; 
+    //play = false;
+   // bonus = 0;  
+   // TriggerFx(9,0xff,true);
+   // WaitVsync(60); 
     }
        else
        {
@@ -1352,7 +1429,7 @@ if   (owl.onscreen && owl.alive)
     play = false;
     bonus = 0; 
     TriggerFx(9,0xff,true);
-    WaitVsync(240); 
+    WaitVsync(60); 
       }
     else
        {
@@ -1768,6 +1845,7 @@ drawplayer();
 drawplayer2(); 
 //drawlevel(Levelx);
 updateWater();
+printheadline(); 
 
 //movelevel();  
 //drawplayer();   
@@ -1778,32 +1856,27 @@ updateWater();
 updatetime(time);
     if ( player.y > 240) 
     {
+    lives++;
+    player.x = 30;
+    player.y = 0;
+
+    };
+    if ( player2.y > 240) 
+    {
     died = true;
     lives--;    
     isplaying = false; 
     play = false;
     bonus = 0; 
     TriggerFx(9,0xff,true);
-    WaitVsync(240); 
-
-    };
-    if ( player2.y > 240) 
-    {
-    player2.y = player.y;
-    //died = true;
-    //lives--;    
-    //isplaying = false; 
-    //play = false;
-   // bonus = 0; 
-   // TriggerFx(9,0xff,true);
-   //WaitVsync(240); 
+    WaitVsync(60); 
     };
 
     if (timeisup)
     {
     printtileint( 26 ,0,leveltime,2);
     TriggerFx(9,0xff,true);
-    WaitVsync(240);   
+    WaitVsync(60);   
     showtimesup();
     lives--;    
     bonus = 0;  
@@ -1813,7 +1886,7 @@ updatetime(time);
       if (finished)
     {
     TriggerFx(10,0xff,true);      
-    WaitVsync(240);   
+    WaitVsync(60);   
     level++;    
     StartSong(midisong);
     isplaying = false; 
