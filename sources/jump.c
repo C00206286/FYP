@@ -37,7 +37,7 @@ const char intro0[] PROGMEM ={
 }; 
 
 const char level1[] PROGMEM ={
-0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,21 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,
+0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0  ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,21 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,37,38,0 ,0 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,21 ,0 ,0 ,35,36,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,
 0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,21 ,0 ,0 ,37,38,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,35,36,0 ,0 ,
@@ -238,7 +238,7 @@ Monster blob;
 bool MonsteronScreen;
 bool introplaying;
 #define maxlevel  9
-#define startlevel  5
+#define startlevel  1
 uint8_t Levelx;
 #define levelwidth  90
 uint8_t scrolltiles;
@@ -636,7 +636,7 @@ itoa(z, str, 10);
 for ( lx = 0; lx < 6 && lx < l; lx++) 
 {
 //DrawMap2(x + i  + scrolltiles / 2,y, nb ); 
-DrawMap2( lx + x,VRAM_TILES_V, nb ); 
+DrawMap2( lx + x,VRAM_TILES_V, black ); 
 if (str[lx] == '0' ) DrawMap2(lx + x,0, n0 );  
 if (str[lx] == '1' ) DrawMap2(lx + x,0, n1 ); 
 if (str[lx] == '2' ) DrawMap2(lx + x,0, n2 ); 
@@ -648,7 +648,7 @@ if (str[lx] == '7' ) DrawMap2(lx + x,0, n7 );
 if (str[lx] == '8' ) DrawMap2(lx + x,0, n8 ); 
 if (str[lx] == '9' ) DrawMap2(lx + x,0, n9 );
 if (str[lx] == '-' ) DrawMap2(lx + x,0, nm );    
-if (str[lx] == ' ' ) DrawMap2(lx + x,0, nb ); 
+if (str[lx] == ' ' ) DrawMap2(lx + x,0, black ); 
     
 
 };
@@ -668,7 +668,13 @@ void initlevel()
           	         DrawMap2(lx ,ly ,black);
                     }
                     else{
-                      DrawMap2(lx ,ly ,blue);  
+                      if(ly == 0  && level != 0 || ly == 1 && level != 0)
+                      {
+                            DrawMap2(lx ,ly ,lilblack);
+                      }
+                      else{
+                          DrawMap2(lx ,ly ,blue);
+                      } 
                     }
                 }
      		}
@@ -861,7 +867,7 @@ if (level == 8)    c=pgm_read_byte(&(level8[(yi*levelwidth)+scrolltiles+16]));
 if (level == 9)    c=pgm_read_byte(&(level9[(yi*levelwidth)+scrolltiles+16]));
     xi = yi << 1;
     if ( c == 0 ) {
-        if(level == 5)
+        if(level == 5 || yi == 0)
         {
         DrawMap2(destX,xi  ,black);
         }
@@ -1025,6 +1031,8 @@ for(int i = 0; i < banspwncnt; i++)
         //bananays[i] = 900;
     //}
 	banspwncnt = banspwncnt - 1;
+    score = score + 5;
+    updatepoints();
 	return 1;
 	}
 }
@@ -1261,19 +1269,6 @@ DrawMap2(16,0, level0 );
 printtileint( 20 ,0, level,1);  
 DrawMap2(23,0, time0 );
 printtileint( 26 ,0,leveltime,2); 
-}
-void printheadlineintro()
-{
-DrawMap2(0,VRAM_TILES_V, score0 );  
-printtileint( 4 ,0,score,4);
-//DrawMap2(8,VRAM_TILES_V, bonus0 );      
-//printtileint( 12 ,0,bonus,1);   
-DrawMap2(11,VRAM_TILES_V, live0 ); 
-
-DrawMap2(16,VRAM_TILES_V, level0 ); 
-  
-DrawMap2(23,VRAM_TILES_V, time0 );
-
 }
 void updatepoints()
 {
@@ -1575,7 +1570,6 @@ Screen.scrollX = 0;
 destX = 0;
 Levelx = 0;
 setheadline();
-printheadlineintro();
 player.direction = 'r';
 player.action = 'w';
 player.facing = 0;
@@ -1845,13 +1839,13 @@ drawplayer();
 drawplayer2(); 
 //drawlevel(Levelx);
 updateWater();
-printheadline(); 
+printheadline();
 
-//movelevel();  
-//drawplayer();   
+//movelevel();
+//drawplayer();  
 
 //movemonster();
-//drawmonster();    
+//drawmonster();
 
 updatetime(time);
     if ( player.y > 240) 
@@ -1886,7 +1880,9 @@ updatetime(time);
       if (finished)
     {
     TriggerFx(10,0xff,true);      
-    WaitVsync(60);   
+    WaitVsync(60);
+    score = score + 100;
+    updatepoints();
     level++;    
     StartSong(midisong);
     isplaying = false; 
