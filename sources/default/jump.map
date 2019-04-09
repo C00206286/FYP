@@ -433,7 +433,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0xd49e
+.text           0x0000000000000000     0xd5ee
  *(.vectors)
  .vectors       0x0000000000000000       0x70 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
                 0x0000000000000000                __vectors
@@ -461,7 +461,7 @@ END GROUP
                 0x0000000000000113                logo_tileset
                 0x0000000000000913                logoInitPatches
                 0x000000000000091c                initPatch
- .progmem.data  0x0000000000000933     0x702d jump.o
+ .progmem.data  0x0000000000000933     0x71c5 jump.o
                 0x0000000000000933                level9
                 0x0000000000000e1f                level8
                 0x000000000000130b                level7
@@ -496,442 +496,446 @@ END GROUP
                 0x000000000000471d                pac1
                 0x0000000000004723                pac0
                 0x0000000000004729                uMTiles
-                0x00000000000077e9                spike1
-                0x00000000000077ed                spike0
-                0x00000000000077f1                congra0
-                0x00000000000077fd                timeup0
-                0x0000000000007805                over0
-                0x000000000000780e                press0
-                0x0000000000007818                time0
-                0x000000000000781d                live0
-                0x0000000000007822                get0
-                0x000000000000782b                x0
-                0x000000000000782e                level0
-                0x0000000000007834                bonus0
-                0x000000000000783a                score0
-                0x0000000000007840                nm
-                0x0000000000007843                n9
-                0x0000000000007846                n8
-                0x0000000000007849                n7
-                0x000000000000784c                n6
-                0x000000000000784f                n5
-                0x0000000000007852                n4
-                0x0000000000007855                n3
-                0x0000000000007858                n2
-                0x000000000000785b                n1
-                0x000000000000785e                n0
-                0x0000000000007861                nb
-                0x0000000000007864                drkbridge3
-                0x0000000000007867                drkbridge2
-                0x000000000000786a                drkbridge1
-                0x000000000000786d                drkbridge0
-                0x0000000000007870                bridge3
-                0x0000000000007873                bridge2
-                0x0000000000007876                bridge1
-                0x0000000000007879                bridge0
-                0x000000000000787c                water3
-                0x0000000000007882                water2
-                0x0000000000007888                water1
-                0x000000000000788e                water0
-                0x0000000000007894                tube5
-                0x000000000000789a                tube4
-                0x00000000000078a0                groundblock1
-                0x00000000000078a6                groundblock0
-                0x00000000000078ac                moss
-                0x00000000000078b2                cloud3
-                0x00000000000078b8                cloud2
-                0x00000000000078be                cloud1
-                0x00000000000078c4                cloud0
-                0x00000000000078ca                fireground
-                0x00000000000078d0                blackblock
-                0x00000000000078d6                lilblack
-                0x00000000000078d9                black
-                0x00000000000078df                fire2
-                0x00000000000078e5                fire1
-                0x00000000000078eb                blue
-                0x00000000000078ee                banana2
-                0x00000000000078f2                banana
-                0x00000000000078f8                diamond0
-                0x00000000000078fe                block3
-                0x0000000000007904                block2
-                0x000000000000790a                door3
-                0x0000000000007910                door2
-                0x0000000000007916                door1
-                0x000000000000791c                door0
-                0x0000000000007922                block5
-                0x0000000000007928                block4
-                0x000000000000792e                ground3
-                0x0000000000007936                ground2
-                0x000000000000793e                ground1
-                0x0000000000007946                ground
-                0x000000000000794e                block1
-                0x0000000000007954                block0
-                0x000000000000795a                bigblue0
-                0x0000000000007960                . = ALIGN (0x2)
+                0x0000000000007969                spike1
+                0x000000000000796d                spike0
+                0x0000000000007971                congra0
+                0x000000000000797d                timeup0
+                0x0000000000007985                over0
+                0x000000000000798e                press0
+                0x0000000000007998                time0
+                0x000000000000799d                live0
+                0x00000000000079a2                get0
+                0x00000000000079ab                x0
+                0x00000000000079ae                level0
+                0x00000000000079b4                bonus0
+                0x00000000000079ba                score0
+                0x00000000000079c0                nm
+                0x00000000000079c3                n9
+                0x00000000000079c6                n8
+                0x00000000000079c9                n7
+                0x00000000000079cc                n6
+                0x00000000000079cf                n5
+                0x00000000000079d2                n4
+                0x00000000000079d5                n3
+                0x00000000000079d8                n2
+                0x00000000000079db                n1
+                0x00000000000079de                n0
+                0x00000000000079e1                nb
+                0x00000000000079e4                tree1
+                0x00000000000079ea                tree0
+                0x00000000000079f0                trunk1
+                0x00000000000079f6                trunk0
+                0x00000000000079fc                drkbridge3
+                0x00000000000079ff                drkbridge2
+                0x0000000000007a02                drkbridge1
+                0x0000000000007a05                drkbridge0
+                0x0000000000007a08                bridge3
+                0x0000000000007a0b                bridge2
+                0x0000000000007a0e                bridge1
+                0x0000000000007a11                bridge0
+                0x0000000000007a14                water3
+                0x0000000000007a1a                water2
+                0x0000000000007a20                water1
+                0x0000000000007a26                water0
+                0x0000000000007a2c                tube5
+                0x0000000000007a32                tube4
+                0x0000000000007a38                groundblock1
+                0x0000000000007a3e                groundblock0
+                0x0000000000007a44                moss
+                0x0000000000007a4a                cloud3
+                0x0000000000007a50                cloud2
+                0x0000000000007a56                cloud1
+                0x0000000000007a5c                cloud0
+                0x0000000000007a62                fireground
+                0x0000000000007a68                blackblock
+                0x0000000000007a6e                lilblack
+                0x0000000000007a71                black
+                0x0000000000007a77                fire2
+                0x0000000000007a7d                fire1
+                0x0000000000007a83                blue
+                0x0000000000007a86                banana2
+                0x0000000000007a8a                banana
+                0x0000000000007a90                diamond0
+                0x0000000000007a96                block3
+                0x0000000000007a9c                block2
+                0x0000000000007aa2                door3
+                0x0000000000007aa8                door2
+                0x0000000000007aae                door1
+                0x0000000000007ab4                door0
+                0x0000000000007aba                block5
+                0x0000000000007ac0                block4
+                0x0000000000007ac6                ground3
+                0x0000000000007ace                ground2
+                0x0000000000007ad6                ground1
+                0x0000000000007ade                ground
+                0x0000000000007ae6                block1
+                0x0000000000007aec                block0
+                0x0000000000007af2                bigblue0
+                0x0000000000007af8                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x0000000000007960                __ctors_start = .
+                0x0000000000007af8                __ctors_start = .
  *(.ctors)
-                0x0000000000007960                __ctors_end = .
-                0x0000000000007960                __dtors_start = .
+                0x0000000000007af8                __ctors_end = .
+                0x0000000000007af8                __dtors_start = .
  *(.dtors)
-                0x0000000000007960                __dtors_end = .
+                0x0000000000007af8                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000000000007960        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
-                0x0000000000007960                __init
+ .init0         0x0000000000007af8        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
+                0x0000000000007af8                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000000000007960        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
+ .init2         0x0000000000007af8        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000000000000796c       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
-                0x000000000000796c                __do_copy_data
- .init4         0x0000000000007982       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
-                0x0000000000007982                __do_clear_bss
+ .init4         0x0000000000007b04       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000007b04                __do_copy_data
+ .init4         0x0000000000007b1a       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000007b1a                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
  *(.init6)
  *(.init6)
  *(.init7)
- .init7         0x0000000000007992       0x18 uzeboxCore.o
-                0x0000000000007992                wdt_init
+ .init7         0x0000000000007b2a       0x18 uzeboxCore.o
+                0x0000000000007b2a                wdt_init
  *(.init7)
  *(.init8)
- .init8         0x00000000000079aa       0x84 uzeboxCore.o
-                0x00000000000079aa                Initialize
+ .init8         0x0000000000007b42       0x84 uzeboxCore.o
+                0x0000000000007b42                Initialize
  *(.init8)
  *(.init9)
- .init9         0x0000000000007a2e        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
+ .init9         0x0000000000007bc6        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
  *(.init9)
  *(.text)
- .text          0x0000000000007a36        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
-                0x0000000000007a36                __vector_22
-                0x0000000000007a36                __vector_1
-                0x0000000000007a36                __vector_24
-                0x0000000000007a36                __vector_12
-                0x0000000000007a36                __bad_interrupt
-                0x0000000000007a36                __vector_6
-                0x0000000000007a36                __vector_3
-                0x0000000000007a36                __vector_23
-                0x0000000000007a36                __vector_25
-                0x0000000000007a36                __vector_11
-                0x0000000000007a36                __vector_17
-                0x0000000000007a36                __vector_19
-                0x0000000000007a36                __vector_7
-                0x0000000000007a36                __vector_27
-                0x0000000000007a36                __vector_5
-                0x0000000000007a36                __vector_4
-                0x0000000000007a36                __vector_9
-                0x0000000000007a36                __vector_2
-                0x0000000000007a36                __vector_21
-                0x0000000000007a36                __vector_8
-                0x0000000000007a36                __vector_26
-                0x0000000000007a36                __vector_10
-                0x0000000000007a36                __vector_16
-                0x0000000000007a36                __vector_18
-                0x0000000000007a36                __vector_20
- .text          0x0000000000007a3a      0x86a uzeboxVideoEngineCore.o
-                0x0000000000007ba2                __vector_15
-                0x0000000000007da0                CopyFlashTile
-                0x0000000000007ebe                CopyRamTile
-                0x0000000000007fd8                RestoreBackground
-                0x0000000000007ffe                BlitSpritePart
-                0x00000000000080cc                __vector_13
-                0x000000000000814a                __vector_14
- .text          0x00000000000082a4      0x168 uzeboxSoundEngineCore.o
-                0x00000000000082a4                process_music
-                0x00000000000082b0                update_sound
-                0x000000000000840c                . = ALIGN (0x2)
+ .text          0x0000000000007bce        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
+                0x0000000000007bce                __vector_22
+                0x0000000000007bce                __vector_1
+                0x0000000000007bce                __vector_24
+                0x0000000000007bce                __vector_12
+                0x0000000000007bce                __bad_interrupt
+                0x0000000000007bce                __vector_6
+                0x0000000000007bce                __vector_3
+                0x0000000000007bce                __vector_23
+                0x0000000000007bce                __vector_25
+                0x0000000000007bce                __vector_11
+                0x0000000000007bce                __vector_17
+                0x0000000000007bce                __vector_19
+                0x0000000000007bce                __vector_7
+                0x0000000000007bce                __vector_27
+                0x0000000000007bce                __vector_5
+                0x0000000000007bce                __vector_4
+                0x0000000000007bce                __vector_9
+                0x0000000000007bce                __vector_2
+                0x0000000000007bce                __vector_21
+                0x0000000000007bce                __vector_8
+                0x0000000000007bce                __vector_26
+                0x0000000000007bce                __vector_10
+                0x0000000000007bce                __vector_16
+                0x0000000000007bce                __vector_18
+                0x0000000000007bce                __vector_20
+ .text          0x0000000000007bd2      0x86a uzeboxVideoEngineCore.o
+                0x0000000000007d3a                __vector_15
+                0x0000000000007f38                CopyFlashTile
+                0x0000000000008056                CopyRamTile
+                0x0000000000008170                RestoreBackground
+                0x0000000000008196                BlitSpritePart
+                0x0000000000008264                __vector_13
+                0x00000000000082e2                __vector_14
+ .text          0x000000000000843c      0x168 uzeboxSoundEngineCore.o
+                0x000000000000843c                process_music
+                0x0000000000008448                update_sound
+                0x00000000000085a4                . = ALIGN (0x2)
  *(.text.*)
  .text.SetSpritesTileTable
-                0x000000000000840c        0xa uzeboxVideoEngineCore.o
-                0x000000000000840c                SetSpritesTileTable
+                0x00000000000085a4        0xa uzeboxVideoEngineCore.o
+                0x00000000000085a4                SetSpritesTileTable
  .text.ClearVram
-                0x0000000000008416       0x14 uzeboxVideoEngineCore.o
-                0x0000000000008416                ClearVram
- .text.SetTile  0x000000000000842a       0x22 uzeboxVideoEngineCore.o
-                0x000000000000842a                SetTile
+                0x00000000000085ae       0x14 uzeboxVideoEngineCore.o
+                0x00000000000085ae                ClearVram
+ .text.SetTile  0x00000000000085c2       0x22 uzeboxVideoEngineCore.o
+                0x00000000000085c2                SetTile
  .text.SetTileTable
-                0x000000000000844c        0xa uzeboxVideoEngineCore.o
-                0x000000000000844c                SetTileTable
+                0x00000000000085e4        0xa uzeboxVideoEngineCore.o
+                0x00000000000085e4                SetTileTable
  .text.GetVsyncFlag
-                0x0000000000008456        0x8 uzeboxVideoEngineCore.o
-                0x0000000000008456                GetVsyncFlag
+                0x00000000000085ee        0x8 uzeboxVideoEngineCore.o
+                0x00000000000085ee                GetVsyncFlag
  .text.ClearVsyncFlag
-                0x000000000000845e        0xc uzeboxVideoEngineCore.o
-                0x000000000000845e                ClearVsyncFlag
+                0x00000000000085f6        0xc uzeboxVideoEngineCore.o
+                0x00000000000085f6                ClearVsyncFlag
  .text.ReadJoypad
-                0x000000000000846a       0x18 uzeboxVideoEngineCore.o
-                0x000000000000846a                ReadJoypad
+                0x0000000000008602       0x18 uzeboxVideoEngineCore.o
+                0x0000000000008602                ReadJoypad
  .text.SoftReset
-                0x0000000000008482       0x18 uzeboxVideoEngineCore.o
-                0x0000000000008482                SoftReset
+                0x000000000000861a       0x18 uzeboxVideoEngineCore.o
+                0x000000000000861a                SoftReset
  .text.WriteEeprom
-                0x000000000000849a       0x14 uzeboxVideoEngineCore.o
-                0x000000000000849a                WriteEeprom
+                0x0000000000008632       0x14 uzeboxVideoEngineCore.o
+                0x0000000000008632                WriteEeprom
  .text.ReadEeprom
-                0x00000000000084ae       0x12 uzeboxVideoEngineCore.o
-                0x00000000000084ae                ReadEeprom
+                0x0000000000008646       0x12 uzeboxVideoEngineCore.o
+                0x0000000000008646                ReadEeprom
  .text.SetUserPostVsyncCallback
-                0x00000000000084c0        0xa uzeboxVideoEngineCore.o
-                0x00000000000084c0                SetUserPostVsyncCallback
+                0x0000000000008658        0xa uzeboxVideoEngineCore.o
+                0x0000000000008658                SetUserPostVsyncCallback
  .text.ReadButtons
-                0x00000000000084ca       0x6c uzeboxCore.o
-                0x00000000000084ca                ReadButtons
+                0x0000000000008662       0x6c uzeboxCore.o
+                0x0000000000008662                ReadButtons
  .text.ReadControllers
-                0x0000000000008536       0x20 uzeboxCore.o
-                0x0000000000008536                ReadControllers
+                0x00000000000086ce       0x20 uzeboxCore.o
+                0x00000000000086ce                ReadControllers
  .text.FormatEeprom
-                0x0000000000008556       0x44 uzeboxCore.o
-                0x0000000000008556                FormatEeprom
+                0x00000000000086ee       0x44 uzeboxCore.o
+                0x00000000000086ee                FormatEeprom
  .text.isEepromFormatted
-                0x000000000000859a       0x2e uzeboxCore.o
-                0x000000000000859a                isEepromFormatted
+                0x0000000000008732       0x2e uzeboxCore.o
+                0x0000000000008732                isEepromFormatted
  .text.PatchCommand00
-                0x00000000000085c8        0x6 uzeboxSoundEngine.o
-                0x00000000000085c8                PatchCommand00
+                0x0000000000008760        0x6 uzeboxSoundEngine.o
+                0x0000000000008760                PatchCommand00
  .text.PatchCommand01
-                0x00000000000085ce       0x10 uzeboxSoundEngine.o
-                0x00000000000085ce                PatchCommand01
+                0x0000000000008766       0x10 uzeboxSoundEngine.o
+                0x0000000000008766                PatchCommand01
  .text.PatchCommand05
-                0x00000000000085de        0xa uzeboxSoundEngine.o
-                0x00000000000085de                PatchCommand05
+                0x0000000000008776        0xa uzeboxSoundEngine.o
+                0x0000000000008776                PatchCommand05
  .text.PatchCommand06
-                0x00000000000085e8        0xa uzeboxSoundEngine.o
-                0x00000000000085e8                PatchCommand06
+                0x0000000000008780        0xa uzeboxSoundEngine.o
+                0x0000000000008780                PatchCommand06
  .text.PatchCommand07
-                0x00000000000085f2        0x6 uzeboxSoundEngine.o
-                0x00000000000085f2                PatchCommand07
+                0x000000000000878a        0x6 uzeboxSoundEngine.o
+                0x000000000000878a                PatchCommand07
  .text.PatchCommand09
-                0x00000000000085f8        0x6 uzeboxSoundEngine.o
-                0x00000000000085f8                PatchCommand09
+                0x0000000000008790        0x6 uzeboxSoundEngine.o
+                0x0000000000008790                PatchCommand09
  .text.PatchCommand10
-                0x00000000000085fe        0x6 uzeboxSoundEngine.o
-                0x00000000000085fe                PatchCommand10
+                0x0000000000008796        0x6 uzeboxSoundEngine.o
+                0x0000000000008796                PatchCommand10
  .text.PatchCommand11
-                0x0000000000008604       0x76 uzeboxSoundEngine.o
-                0x0000000000008604                PatchCommand11
+                0x000000000000879c       0x76 uzeboxSoundEngine.o
+                0x000000000000879c                PatchCommand11
  .text.PatchCommand12
-                0x000000000000867a        0x6 uzeboxSoundEngine.o
-                0x000000000000867a                PatchCommand12
+                0x0000000000008812        0x6 uzeboxSoundEngine.o
+                0x0000000000008812                PatchCommand12
  .text.PatchCommand13
-                0x0000000000008680        0x6 uzeboxSoundEngine.o
-                0x0000000000008680                PatchCommand13
+                0x0000000000008818        0x6 uzeboxSoundEngine.o
+                0x0000000000008818                PatchCommand13
  .text.PatchCommand02
-                0x0000000000008686        0x8 uzeboxSoundEngine.o
-                0x0000000000008686                PatchCommand02
+                0x000000000000881e        0x8 uzeboxSoundEngine.o
+                0x000000000000881e                PatchCommand02
  .text.PatchCommand03
-                0x000000000000868e        0xe uzeboxSoundEngine.o
-                0x000000000000868e                PatchCommand03
+                0x0000000000008826        0xe uzeboxSoundEngine.o
+                0x0000000000008826                PatchCommand03
  .text.PatchCommand04
-                0x000000000000869c       0x10 uzeboxSoundEngine.o
-                0x000000000000869c                PatchCommand04
+                0x0000000000008834       0x10 uzeboxSoundEngine.o
+                0x0000000000008834                PatchCommand04
  .text.PatchCommand08
-                0x00000000000086ac       0x20 uzeboxSoundEngine.o
-                0x00000000000086ac                PatchCommand08
+                0x0000000000008844       0x20 uzeboxSoundEngine.o
+                0x0000000000008844                PatchCommand08
  .text.PatchCommand14
-                0x00000000000086cc       0x54 uzeboxSoundEngine.o
-                0x00000000000086cc                PatchCommand14
+                0x0000000000008864       0x54 uzeboxSoundEngine.o
+                0x0000000000008864                PatchCommand14
  .text.InitMusicPlayer
-                0x0000000000008720       0x36 uzeboxSoundEngine.o
-                0x0000000000008720                InitMusicPlayer
+                0x00000000000088b8       0x36 uzeboxSoundEngine.o
+                0x00000000000088b8                InitMusicPlayer
  .text.StartSong
-                0x0000000000008756       0x52 uzeboxSoundEngine.o
-                0x0000000000008756                StartSong
+                0x00000000000088ee       0x52 uzeboxSoundEngine.o
+                0x00000000000088ee                StartSong
  .text.StopSong
-                0x00000000000087a8       0x1a uzeboxSoundEngine.o
-                0x00000000000087a8                StopSong
+                0x0000000000008940       0x1a uzeboxSoundEngine.o
+                0x0000000000008940                StopSong
  .text.ReadVarLen
-                0x00000000000087c2       0x4c uzeboxSoundEngine.o
-                0x00000000000087c2                ReadVarLen
+                0x000000000000895a       0x4c uzeboxSoundEngine.o
+                0x000000000000895a                ReadVarLen
  .text.TriggerCommon
-                0x000000000000880e      0x102 uzeboxSoundEngine.o
-                0x000000000000880e                TriggerCommon
+                0x00000000000089a6      0x102 uzeboxSoundEngine.o
+                0x00000000000089a6                TriggerCommon
  .text.TriggerFx
-                0x0000000000008910       0x90 uzeboxSoundEngine.o
-                0x0000000000008910                TriggerFx
+                0x0000000000008aa8       0x90 uzeboxSoundEngine.o
+                0x0000000000008aa8                TriggerFx
  .text.TriggerNote
-                0x00000000000089a0       0x80 uzeboxSoundEngine.o
-                0x00000000000089a0                TriggerNote
+                0x0000000000008b38       0x80 uzeboxSoundEngine.o
+                0x0000000000008b38                TriggerNote
  .text.ProcessMusic
-                0x0000000000008a20      0x3b2 uzeboxSoundEngine.o
-                0x0000000000008a20                ProcessMusic
+                0x0000000000008bb8      0x3b2 uzeboxSoundEngine.o
+                0x0000000000008bb8                ProcessMusic
  .text.SetMixerNote
-                0x0000000000008dd2       0x2e uzeboxSoundEngineCore.o
-                0x0000000000008dd2                SetMixerNote
+                0x0000000000008f6a       0x2e uzeboxSoundEngineCore.o
+                0x0000000000008f6a                SetMixerNote
  .text.SetMixerWave
-                0x0000000000008e00       0x3a uzeboxSoundEngineCore.o
-                0x0000000000008e00                SetMixerWave
+                0x0000000000008f98       0x3a uzeboxSoundEngineCore.o
+                0x0000000000008f98                SetMixerWave
  .text.steptable
-                0x0000000000008e3a       0xfe uzeboxSoundEngineCore.o
-                0x0000000000008e3a                steptable
- *fill*         0x0000000000008f38       0xc8 
- .text.waves    0x0000000000009000      0xa00 uzeboxSoundEngineCore.o
-                0x0000000000009000                waves
+                0x0000000000008fd2       0xfe uzeboxSoundEngineCore.o
+                0x0000000000008fd2                steptable
+ *fill*         0x00000000000090d0       0x30 
+ .text.waves    0x0000000000009100      0xa00 uzeboxSoundEngineCore.o
+                0x0000000000009100                waves
  .text.ProcessSprites
-                0x0000000000009a00      0x25c uzeboxVideoEngine.o
-                0x0000000000009a00                ProcessSprites
- .text.Scroll   0x0000000000009c5c       0x34 uzeboxVideoEngine.o
-                0x0000000000009c5c                Scroll
+                0x0000000000009b00      0x25c uzeboxVideoEngine.o
+                0x0000000000009b00                ProcessSprites
+ .text.Scroll   0x0000000000009d5c       0x34 uzeboxVideoEngine.o
+                0x0000000000009d5c                Scroll
  .text.MapSprite2
-                0x0000000000009c90       0x9a uzeboxVideoEngine.o
-                0x0000000000009c90                MapSprite2
+                0x0000000000009d90       0x9a uzeboxVideoEngine.o
+                0x0000000000009d90                MapSprite2
  .text.MoveSprite
-                0x0000000000009d2a       0x32 uzeboxVideoEngine.o
-                0x0000000000009d2a                MoveSprite
+                0x0000000000009e2a       0x32 uzeboxVideoEngine.o
+                0x0000000000009e2a                MoveSprite
  .text.InitializeVideoMode
-                0x0000000000009d5c       0x28 uzeboxVideoEngine.o
-                0x0000000000009d5c                InitializeVideoMode
- .text.DrawMap  0x0000000000009d84       0x7e uzeboxVideoEngine.o
-                0x0000000000009d84                DrawMap2
-                0x0000000000009d84                DrawMap
+                0x0000000000009e5c       0x28 uzeboxVideoEngine.o
+                0x0000000000009e5c                InitializeVideoMode
+ .text.DrawMap  0x0000000000009e84       0x7e uzeboxVideoEngine.o
+                0x0000000000009e84                DrawMap2
+                0x0000000000009e84                DrawMap
  .text.WaitVsync
-                0x0000000000009e02       0x2e uzeboxVideoEngine.o
-                0x0000000000009e02                WaitVsync
+                0x0000000000009f02       0x2e uzeboxVideoEngine.o
+                0x0000000000009f02                WaitVsync
  .text.DisplayLogo
-                0x0000000000009e30       0x6e uzeboxVideoEngine.o
-                0x0000000000009e30                DisplayLogo
- .text.doFade   0x0000000000009e9e       0x1c uzeboxVideoEngine.o
-                0x0000000000009e9e                doFade
- .text.FadeIn   0x0000000000009eba       0x18 uzeboxVideoEngine.o
-                0x0000000000009eba                FadeIn
- .text.FadeOut  0x0000000000009ed2       0x18 uzeboxVideoEngine.o
-                0x0000000000009ed2                FadeOut
+                0x0000000000009f30       0x6e uzeboxVideoEngine.o
+                0x0000000000009f30                DisplayLogo
+ .text.doFade   0x0000000000009f9e       0x1c uzeboxVideoEngine.o
+                0x0000000000009f9e                doFade
+ .text.FadeIn   0x0000000000009fba       0x18 uzeboxVideoEngine.o
+                0x0000000000009fba                FadeIn
+ .text.FadeOut  0x0000000000009fd2       0x18 uzeboxVideoEngine.o
+                0x0000000000009fd2                FadeOut
  .text.ProcessFading
-                0x0000000000009eea       0x4a uzeboxVideoEngine.o
-                0x0000000000009eea                ProcessFading
+                0x0000000000009fea       0x4a uzeboxVideoEngine.o
+                0x0000000000009fea                ProcessFading
  .text.VideoModeVsync
-                0x0000000000009f34        0x8 uzeboxVideoEngine.o
-                0x0000000000009f34                VideoModeVsync
+                0x000000000000a034        0x8 uzeboxVideoEngine.o
+                0x000000000000a034                VideoModeVsync
  .text.vsync_callback
-                0x0000000000009f3c       0x28 jump.o
-                0x0000000000009f3c                vsync_callback
+                0x000000000000a03c       0x28 jump.o
+                0x000000000000a03c                vsync_callback
  .text.drawplayer
-                0x0000000000009f64      0x12c jump.o
-                0x0000000000009f64                drawplayer
+                0x000000000000a064      0x12c jump.o
+                0x000000000000a064                drawplayer
  .text.drawplayer2
-                0x000000000000a090      0x11c jump.o
-                0x000000000000a090                drawplayer2
+                0x000000000000a190      0x11c jump.o
+                0x000000000000a190                drawplayer2
  .text.printtileint
-                0x000000000000a1ac      0x264 jump.o
-                0x000000000000a1ac                printtileint
+                0x000000000000a2ac      0x264 jump.o
+                0x000000000000a2ac                printtileint
  .text.initlevel
-                0x000000000000a410       0xb4 jump.o
-                0x000000000000a410                initlevel
+                0x000000000000a510       0xb4 jump.o
+                0x000000000000a510                initlevel
  .text.makeWater
-                0x000000000000a4c4       0x42 jump.o
-                0x000000000000a4c4                makeWater
+                0x000000000000a5c4       0x42 jump.o
+                0x000000000000a5c4                makeWater
  .text.updateWater
-                0x000000000000a506      0x15c jump.o
-                0x000000000000a506                updateWater
+                0x000000000000a606      0x15c jump.o
+                0x000000000000a606                updateWater
  .text.makeBanana2
-                0x000000000000a662       0xb0 jump.o
-                0x000000000000a662                makeBanana2
+                0x000000000000a762       0xb0 jump.o
+                0x000000000000a762                makeBanana2
  .text.printheadline
-                0x000000000000a712       0x8a jump.o
-                0x000000000000a712                printheadline
+                0x000000000000a812       0x8a jump.o
+                0x000000000000a812                printheadline
  .text.updatepoints
-                0x000000000000a79c       0x22 jump.o
-                0x000000000000a79c                updatepoints
+                0x000000000000a89c       0x22 jump.o
+                0x000000000000a89c                updatepoints
  .text.checkBanana
-                0x000000000000a7be      0x1f4 jump.o
-                0x000000000000a7be                checkBanana
+                0x000000000000a8be      0x1f4 jump.o
+                0x000000000000a8be                checkBanana
  .text.checkcollide
-                0x000000000000a9b2      0x77a jump.o
-                0x000000000000a9b2                checkcollide
+                0x000000000000aab2      0x778 jump.o
+                0x000000000000aab2                checkcollide
  .text.moveplayer2
-                0x000000000000b12c      0x542 jump.o
-                0x000000000000b12c                moveplayer2
+                0x000000000000b22a      0x542 jump.o
+                0x000000000000b22a                moveplayer2
  .text.setheadline
-                0x000000000000b66e       0x1a jump.o
-                0x000000000000b66e                setheadline
+                0x000000000000b76c       0x1a jump.o
+                0x000000000000b76c                setheadline
  .text.drawmonster
-                0x000000000000b688       0x9c jump.o
-                0x000000000000b688                drawmonster
+                0x000000000000b786       0x9c jump.o
+                0x000000000000b786                drawmonster
  .text.movemonster
-                0x000000000000b724      0x1a2 jump.o
-                0x000000000000b724                movemonster
+                0x000000000000b822      0x1a2 jump.o
+                0x000000000000b822                movemonster
  .text.checkplayer
-                0x000000000000b8c6       0x6e jump.o
-                0x000000000000b8c6                checkplayer
+                0x000000000000b9c4       0x6e jump.o
+                0x000000000000b9c4                checkplayer
  .text.checkmonster
-                0x000000000000b934       0xa8 jump.o
-                0x000000000000b934                checkmonster
+                0x000000000000ba32       0xa8 jump.o
+                0x000000000000ba32                checkmonster
  .text.moveplayer
-                0x000000000000b9dc      0x710 jump.o
-                0x000000000000b9dc                moveplayer
+                0x000000000000bada      0x710 jump.o
+                0x000000000000bada                moveplayer
  .text.scrollmonster
-                0x000000000000c0ec       0x26 jump.o
-                0x000000000000c0ec                scrollmonster
- .text.setowl   0x000000000000c112       0x7a jump.o
-                0x000000000000c112                setowl
+                0x000000000000c1ea       0x26 jump.o
+                0x000000000000c1ea                scrollmonster
+ .text.setowl   0x000000000000c210       0x7a jump.o
+                0x000000000000c210                setowl
  .text.drawlevel
-                0x000000000000c18c      0x2e0 jump.o
-                0x000000000000c18c                drawlevel
+                0x000000000000c28a      0x308 jump.o
+                0x000000000000c28a                drawlevel
  .text.updatelevel
-                0x000000000000c46c      0x378 jump.o
-                0x000000000000c46c                updatelevel
+                0x000000000000c592      0x3a0 jump.o
+                0x000000000000c592                updatelevel
  .text.initmonster
-                0x000000000000c7e4        0xa jump.o
-                0x000000000000c7e4                initmonster
+                0x000000000000c932        0xa jump.o
+                0x000000000000c932                initmonster
  .text.movelevel
-                0x000000000000c7ee       0xbe jump.o
-                0x000000000000c7ee                movelevel
+                0x000000000000c93c       0xbe jump.o
+                0x000000000000c93c                movelevel
  .text.updatetime
-                0x000000000000c8ac       0x6a jump.o
-                0x000000000000c8ac                updatetime
+                0x000000000000c9fa       0x6a jump.o
+                0x000000000000c9fa                updatetime
  .text.playintro
-                0x000000000000c916      0x3de jump.o
-                0x000000000000c916                playintro
+                0x000000000000ca64      0x3de jump.o
+                0x000000000000ca64                playintro
  .text.showgetready
-                0x000000000000ccf4       0xc0 jump.o
-                0x000000000000ccf4                showgetready
+                0x000000000000ce42       0xc0 jump.o
+                0x000000000000ce42                showgetready
  .text.showgameover
-                0x000000000000cdb4       0xa8 jump.o
-                0x000000000000cdb4                showgameover
+                0x000000000000cf02       0xa8 jump.o
+                0x000000000000cf02                showgameover
  .text.showtimesup
-                0x000000000000ce5c       0xa8 jump.o
-                0x000000000000ce5c                showtimesup
+                0x000000000000cfaa       0xa8 jump.o
+                0x000000000000cfaa                showtimesup
  .text.showcongratulation
-                0x000000000000cf04       0xa2 jump.o
-                0x000000000000cf04                showcongratulation
+                0x000000000000d052       0xa2 jump.o
+                0x000000000000d052                showcongratulation
  .text.startup.main
-                0x000000000000cfa6      0x3f6 jump.o
-                0x000000000000cfa6                main
+                0x000000000000d0f4      0x3f8 jump.o
+                0x000000000000d0f4                main
  .text.libgcc.div
-                0x000000000000d39c       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
-                0x000000000000d39c                __udivmodhi4
+                0x000000000000d4ec       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x000000000000d4ec                __udivmodhi4
  .text.libgcc.div
-                0x000000000000d3c4       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
-                0x000000000000d3c4                __divmodhi4
-                0x000000000000d3c4                _div
+                0x000000000000d514       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x000000000000d514                __divmodhi4
+                0x000000000000d514                _div
  .text.libgcc.div
-                0x000000000000d3ec       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
-                0x000000000000d3ec                __udivmodsi4
+                0x000000000000d53c       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x000000000000d53c                __udivmodsi4
  .text.avr-libc
-                0x000000000000d430       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
-                0x000000000000d430                __itoa_ncheck
+                0x000000000000d580       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
+                0x000000000000d580                __itoa_ncheck
  .text.avr-libc
-                0x000000000000d446       0x34 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
-                0x000000000000d446                __utoa_ncheck
-                0x000000000000d448                __utoa_common
+                0x000000000000d596       0x34 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
+                0x000000000000d596                __utoa_ncheck
+                0x000000000000d598                __utoa_common
  .text.avr-libc
-                0x000000000000d47a       0x20 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strrev.o)
-                0x000000000000d47a                strrev
-                0x000000000000d49a                . = ALIGN (0x2)
+                0x000000000000d5ca       0x20 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strrev.o)
+                0x000000000000d5ca                strrev
+                0x000000000000d5ea                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000000000d49a        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
-                0x000000000000d49a                exit
-                0x000000000000d49a                _exit
+ .fini9         0x000000000000d5ea        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x000000000000d5ea                exit
+                0x000000000000d5ea                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -950,11 +954,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000000000d49a        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .fini0         0x000000000000d5ea        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x000000000000d49e                _etext = .
+                0x000000000000d5ee                _etext = .
 
-.data           0x0000000000800100        0x2 load address 0x000000000000d49e
+.data           0x0000000000800100        0x2 load address 0x000000000000d5ee
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800100        0x1 uzeboxVideoEngine.o
@@ -1062,8 +1066,8 @@ END GROUP
                 0x0000000000800a93                waterys
                 0x0000000000800ac3                scrolltiles
                 0x0000000000800ac4                PROVIDE (__bss_end, .)
-                0x000000000000d49e                __data_load_start = LOADADDR (.data)
-                0x000000000000d4a0                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000000000000d5ee                __data_load_start = LOADADDR (.data)
+                0x000000000000d5f0                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0000000000800ac4      0x43c
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -1159,7 +1163,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x7cdb
+.debug_info     0x0000000000000000     0x7d3b
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x672 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
  .debug_info    0x0000000000000672       0x85 uzeboxVideoEngineCore.o
@@ -1167,7 +1171,7 @@ END GROUP
  .debug_info    0x00000000000011c8     0x12f7 uzeboxSoundEngine.o
  .debug_info    0x00000000000024bf       0x7c uzeboxSoundEngineCore.o
  .debug_info    0x000000000000253b     0x1556 uzeboxVideoEngine.o
- .debug_info    0x0000000000003a91     0x424a jump.o
+ .debug_info    0x0000000000003a91     0x42aa jump.o
 
 .debug_abbrev   0x0000000000000000     0x13ef
  *(.debug_abbrev)
@@ -1179,7 +1183,7 @@ END GROUP
  .debug_abbrev  0x0000000000000c84      0x3c5 uzeboxVideoEngine.o
  .debug_abbrev  0x0000000000001049      0x3a6 jump.o
 
-.debug_line     0x0000000000000000     0x5b3d
+.debug_line     0x0000000000000000     0x5bcd
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
  .debug_line    0x000000000000001a     0x1663 uzeboxVideoEngineCore.o
@@ -1187,7 +1191,7 @@ END GROUP
  .debug_line    0x0000000000001b98      0x879 uzeboxSoundEngine.o
  .debug_line    0x0000000000002411      0x577 uzeboxSoundEngineCore.o
  .debug_line    0x0000000000002988      0x9cb uzeboxVideoEngine.o
- .debug_line    0x0000000000003353     0x27ea jump.o
+ .debug_line    0x0000000000003353     0x287a jump.o
 
 .debug_frame    0x0000000000000000      0xc98
  *(.debug_frame)
@@ -1196,7 +1200,7 @@ END GROUP
  .debug_frame   0x0000000000000410      0x488 uzeboxVideoEngine.o
  .debug_frame   0x0000000000000898      0x400 jump.o
 
-.debug_str      0x0000000000000000     0x158c
+.debug_str      0x0000000000000000     0x15a6
  *(.debug_str)
  .debug_str     0x0000000000000000      0x231 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
  .debug_str     0x0000000000000231      0x4e4 uzeboxCore.o
@@ -1205,8 +1209,8 @@ END GROUP
                                         0x665 (size before relaxing)
  .debug_str     0x0000000000000b26      0x3d1 uzeboxVideoEngine.o
                                         0x5b4 (size before relaxing)
- .debug_str     0x0000000000000ef7      0x695 jump.o
-                                        0x92d (size before relaxing)
+ .debug_str     0x0000000000000ef7      0x6af jump.o
+                                        0x947 (size before relaxing)
 
 .debug_loc      0x0000000000000000     0x51dc
  *(.debug_loc)
