@@ -7,6 +7,7 @@
         <map var-name="pac0" left="0" top="0" width="2" height="2"/>
         <map var-name="pac1" left="2" top="0" width="2" height="2"/>
         <map var-name="pac2" left="4" top="0" width="2" height="2"/>
+	<map var-name="pac3" left="14" top="0" width="2" height="2"/>
 	<map var-name="owl0"   left="6" top="0" width="2" height="2"/>
 	<map var-name="owl1"   left="8" top="0" width="2" height="2"/>
         <map var-name="run0" left="10" top="0" width="2" height="2"/>
