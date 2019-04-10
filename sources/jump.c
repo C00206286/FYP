@@ -686,7 +686,9 @@ if (str[lx] == ' ' ) DrawMap2(lx + x,y, black );
 void initlevel()
 {
   for (lx = 0; lx < maxdiamonds; lx ++ ) diamonds[lx] = 0;      
-  for (lx = 0; lx < maxbridges; lx ++ ) {bridges[lx].id = 0; bridges[lx].l = 0; bridges[lx].r = 0; }; 
+  for (lx = 0; lx < maxbridges; lx ++ ) {bridges[lx].id = 0; bridges[lx].l = 0; bridges[lx].r = 0; };
+  for (lx = 0; lx < 10; lx ++ ) {bananaxs[lx] = 0; bananascrolls[lx] = 0; bananays[lx] = 0; };
+  banspwncnt = 0; 
     for (lx = 0; lx < 32; lx++)
      		{
                 for (  ly = 0; ly < 28; ly++ )
@@ -1131,7 +1133,13 @@ for(int i = 0; i < banspwncnt; i++)
     }
 	else if(bananaxs[i] == lx && bananays[i] == ly)
 	{ 
-        DrawMap2(  lx    ,  ly,bigblue0 ); 
+        if(level >= 7)
+        {
+            DrawMap2(  lx    ,  ly,black);
+        }
+        else{
+            DrawMap2(  lx    ,  ly,bigblue0 ); 
+        }
 	    //DrawMap2(  lx    ,  ly + 1,banana2 );
         bananaxs[i] = 0;
         bananays[i] = 0;

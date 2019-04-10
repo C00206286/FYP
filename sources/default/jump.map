@@ -431,7 +431,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0xd86c
+.text           0x0000000000000000     0xd8a6
  *(.vectors)
  .vectors       0x0000000000000000       0x70 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
                 0x0000000000000000                __vectors
@@ -833,114 +833,114 @@ END GROUP
                 0x000000000000a3ac      0x26a jump.o
                 0x000000000000a3ac                printtileint
  .text.initlevel
-                0x000000000000a616       0xb4 jump.o
+                0x000000000000a616       0xe8 jump.o
                 0x000000000000a616                initlevel
  .text.makeWater
-                0x000000000000a6ca       0x42 jump.o
-                0x000000000000a6ca                makeWater
+                0x000000000000a6fe       0x42 jump.o
+                0x000000000000a6fe                makeWater
  .text.updateWater
-                0x000000000000a70c      0x15c jump.o
-                0x000000000000a70c                updateWater
+                0x000000000000a740      0x15c jump.o
+                0x000000000000a740                updateWater
  .text.makeBanana2
-                0x000000000000a868       0xbc jump.o
-                0x000000000000a868                makeBanana2
+                0x000000000000a89c       0xbc jump.o
+                0x000000000000a89c                makeBanana2
  .text.printheadline
-                0x000000000000a924       0x8a jump.o
-                0x000000000000a924                printheadline
+                0x000000000000a958       0x8a jump.o
+                0x000000000000a958                printheadline
  .text.updatepoints
-                0x000000000000a9ae       0x22 jump.o
-                0x000000000000a9ae                updatepoints
+                0x000000000000a9e2       0x22 jump.o
+                0x000000000000a9e2                updatepoints
  .text.checkBanana
-                0x000000000000a9d0      0x1ee jump.o
-                0x000000000000a9d0                checkBanana
+                0x000000000000aa04      0x1f4 jump.o
+                0x000000000000aa04                checkBanana
  .text.checkcollide
-                0x000000000000abbe      0x7fe jump.o
-                0x000000000000abbe                checkcollide
+                0x000000000000abf8      0x7fe jump.o
+                0x000000000000abf8                checkcollide
  .text.moveplayer2
-                0x000000000000b3bc      0x564 jump.o
-                0x000000000000b3bc                moveplayer2
+                0x000000000000b3f6      0x564 jump.o
+                0x000000000000b3f6                moveplayer2
  .text.setheadline
-                0x000000000000b920       0x1a jump.o
-                0x000000000000b920                setheadline
+                0x000000000000b95a       0x1a jump.o
+                0x000000000000b95a                setheadline
  .text.drawmonster
-                0x000000000000b93a       0x9c jump.o
-                0x000000000000b93a                drawmonster
+                0x000000000000b974       0x9c jump.o
+                0x000000000000b974                drawmonster
  .text.movemonster
-                0x000000000000b9d6      0x1a2 jump.o
-                0x000000000000b9d6                movemonster
+                0x000000000000ba10      0x1a2 jump.o
+                0x000000000000ba10                movemonster
  .text.checkplayer
-                0x000000000000bb78       0x6e jump.o
-                0x000000000000bb78                checkplayer
+                0x000000000000bbb2       0x6e jump.o
+                0x000000000000bbb2                checkplayer
  .text.checkmonster
-                0x000000000000bbe6       0xac jump.o
-                0x000000000000bbe6                checkmonster
+                0x000000000000bc20       0xac jump.o
+                0x000000000000bc20                checkmonster
  .text.moveplayer
-                0x000000000000bc92      0x728 jump.o
-                0x000000000000bc92                moveplayer
+                0x000000000000bccc      0x728 jump.o
+                0x000000000000bccc                moveplayer
  .text.scrollmonster
-                0x000000000000c3ba       0x26 jump.o
-                0x000000000000c3ba                scrollmonster
+                0x000000000000c3f4       0x26 jump.o
+                0x000000000000c3f4                scrollmonster
  .text.setghost
-                0x000000000000c3e0       0x7a jump.o
-                0x000000000000c3e0                setghost
+                0x000000000000c41a       0x7a jump.o
+                0x000000000000c41a                setghost
  .text.drawlevel
-                0x000000000000c45a      0x342 jump.o
-                0x000000000000c45a                drawlevel
+                0x000000000000c494      0x342 jump.o
+                0x000000000000c494                drawlevel
  .text.updatelevel
-                0x000000000000c79c      0x3e8 jump.o
-                0x000000000000c79c                updatelevel
+                0x000000000000c7d6      0x3e8 jump.o
+                0x000000000000c7d6                updatelevel
  .text.initmonster
-                0x000000000000cb84        0xa jump.o
-                0x000000000000cb84                initmonster
+                0x000000000000cbbe        0xa jump.o
+                0x000000000000cbbe                initmonster
  .text.movelevel
-                0x000000000000cb8e       0xbe jump.o
-                0x000000000000cb8e                movelevel
+                0x000000000000cbc8       0xbe jump.o
+                0x000000000000cbc8                movelevel
  .text.updatetime
-                0x000000000000cc4c       0x6a jump.o
-                0x000000000000cc4c                updatetime
+                0x000000000000cc86       0x6a jump.o
+                0x000000000000cc86                updatetime
  .text.playintro
-                0x000000000000ccb6      0x3da jump.o
-                0x000000000000ccb6                playintro
+                0x000000000000ccf0      0x3da jump.o
+                0x000000000000ccf0                playintro
  .text.showgetready
-                0x000000000000d090       0xc0 jump.o
-                0x000000000000d090                showgetready
+                0x000000000000d0ca       0xc0 jump.o
+                0x000000000000d0ca                showgetready
  .text.showgameover
-                0x000000000000d150       0xa8 jump.o
-                0x000000000000d150                showgameover
+                0x000000000000d18a       0xa8 jump.o
+                0x000000000000d18a                showgameover
  .text.showtimesup
-                0x000000000000d1f8       0xa8 jump.o
-                0x000000000000d1f8                showtimesup
+                0x000000000000d232       0xa8 jump.o
+                0x000000000000d232                showtimesup
  .text.showcongratulation
-                0x000000000000d2a0       0xc6 jump.o
-                0x000000000000d2a0                showcongratulation
+                0x000000000000d2da       0xc6 jump.o
+                0x000000000000d2da                showcongratulation
  .text.startup.main
-                0x000000000000d366      0x404 jump.o
-                0x000000000000d366                main
+                0x000000000000d3a0      0x404 jump.o
+                0x000000000000d3a0                main
  .text.libgcc.div
-                0x000000000000d76a       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
-                0x000000000000d76a                __udivmodhi4
+                0x000000000000d7a4       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x000000000000d7a4                __udivmodhi4
  .text.libgcc.div
-                0x000000000000d792       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
-                0x000000000000d792                __divmodhi4
-                0x000000000000d792                _div
+                0x000000000000d7cc       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_divmodhi4.o)
+                0x000000000000d7cc                __divmodhi4
+                0x000000000000d7cc                _div
  .text.libgcc.div
-                0x000000000000d7ba       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
-                0x000000000000d7ba                __udivmodsi4
+                0x000000000000d7f4       0x44 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x000000000000d7f4                __udivmodsi4
  .text.avr-libc
-                0x000000000000d7fe       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
-                0x000000000000d7fe                __itoa_ncheck
+                0x000000000000d838       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(itoa_ncheck.o)
+                0x000000000000d838                __itoa_ncheck
  .text.avr-libc
-                0x000000000000d814       0x34 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
-                0x000000000000d814                __utoa_ncheck
-                0x000000000000d816                __utoa_common
+                0x000000000000d84e       0x34 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(utoa_ncheck.o)
+                0x000000000000d84e                __utoa_ncheck
+                0x000000000000d850                __utoa_common
  .text.avr-libc
-                0x000000000000d848       0x20 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strrev.o)
-                0x000000000000d848                strrev
-                0x000000000000d868                . = ALIGN (0x2)
+                0x000000000000d882       0x20 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strrev.o)
+                0x000000000000d882                strrev
+                0x000000000000d8a2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000000000d868        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
-                0x000000000000d868                exit
-                0x000000000000d868                _exit
+ .fini9         0x000000000000d8a2        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x000000000000d8a2                exit
+                0x000000000000d8a2                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -959,11 +959,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000000000d868        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .fini0         0x000000000000d8a2        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x000000000000d86c                _etext = .
+                0x000000000000d8a6                _etext = .
 
-.data           0x0000000000800100        0x2 load address 0x000000000000d86c
+.data           0x0000000000800100        0x2 load address 0x000000000000d8a6
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800100        0x1 uzeboxVideoEngine.o
@@ -1071,8 +1071,8 @@ END GROUP
                 0x0000000000800a93                waterys
                 0x0000000000800ac3                scrolltiles
                 0x0000000000800ac4                PROVIDE (__bss_end, .)
-                0x000000000000d86c                __data_load_start = LOADADDR (.data)
-                0x000000000000d86e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000000000000d8a6                __data_load_start = LOADADDR (.data)
+                0x000000000000d8a8                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0000000000800ac4      0x43c
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -1168,7 +1168,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x7ec4
+.debug_info     0x0000000000000000     0x7eab
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x672 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
  .debug_info    0x0000000000000672       0x85 uzeboxVideoEngineCore.o
@@ -1176,7 +1176,7 @@ END GROUP
  .debug_info    0x00000000000011c8     0x12f7 uzeboxSoundEngine.o
  .debug_info    0x00000000000024bf       0x7c uzeboxSoundEngineCore.o
  .debug_info    0x000000000000253b     0x1556 uzeboxVideoEngine.o
- .debug_info    0x0000000000003a91     0x4433 jump.o
+ .debug_info    0x0000000000003a91     0x441a jump.o
 
 .debug_abbrev   0x0000000000000000     0x13de
  *(.debug_abbrev)
@@ -1188,7 +1188,7 @@ END GROUP
  .debug_abbrev  0x0000000000000c84      0x3c5 uzeboxVideoEngine.o
  .debug_abbrev  0x0000000000001049      0x395 jump.o
 
-.debug_line     0x0000000000000000     0x5c8c
+.debug_line     0x0000000000000000     0x5cb0
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega644.o
  .debug_line    0x000000000000001a     0x1663 uzeboxVideoEngineCore.o
@@ -1196,14 +1196,14 @@ END GROUP
  .debug_line    0x0000000000001b98      0x879 uzeboxSoundEngine.o
  .debug_line    0x0000000000002411      0x577 uzeboxSoundEngineCore.o
  .debug_line    0x0000000000002988      0x9cb uzeboxVideoEngine.o
- .debug_line    0x0000000000003353     0x2939 jump.o
+ .debug_line    0x0000000000003353     0x295d jump.o
 
-.debug_frame    0x0000000000000000      0xc9c
+.debug_frame    0x0000000000000000      0xca8
  *(.debug_frame)
  .debug_frame   0x0000000000000000      0x1bc uzeboxCore.o
  .debug_frame   0x00000000000001bc      0x254 uzeboxSoundEngine.o
  .debug_frame   0x0000000000000410      0x488 uzeboxVideoEngine.o
- .debug_frame   0x0000000000000898      0x404 jump.o
+ .debug_frame   0x0000000000000898      0x410 jump.o
 
 .debug_str      0x0000000000000000     0x15b5
  *(.debug_str)
@@ -1217,12 +1217,12 @@ END GROUP
  .debug_str     0x0000000000000ef7      0x6be jump.o
                                         0x96c (size before relaxing)
 
-.debug_loc      0x0000000000000000     0x51ba
+.debug_loc      0x0000000000000000     0x51fd
  *(.debug_loc)
  .debug_loc     0x0000000000000000      0x9f9 uzeboxCore.o
  .debug_loc     0x00000000000009f9     0x107b uzeboxSoundEngine.o
  .debug_loc     0x0000000000001a74     0x1c10 uzeboxVideoEngine.o
- .debug_loc     0x0000000000003684     0x1b36 jump.o
+ .debug_loc     0x0000000000003684     0x1b79 jump.o
 
 .debug_macinfo
  *(.debug_macinfo)
